@@ -71,8 +71,8 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div
-            className={`relative h-12 sm:h-14 w-36 sm:w-44 transition-all duration-300 ${
-              isScrolled ? "brightness-100" : "brightness-0 invert drop-shadow-md"
+            className={`relative h-14 sm:h-16 md:h-18 w-44 sm:w-52 md:w-60 transition-all duration-300 group-hover:scale-105 ${
+              isScrolled ? "brightness-100 drop-shadow-xs" : "brightness-0 invert drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
             }`}
           >
             <Image

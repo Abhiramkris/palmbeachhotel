@@ -23,8 +23,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-neutral-800/80">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block">
-              <div className="relative h-14 w-44 brightness-0 invert opacity-90">
+            <Link href="/" className="inline-block group">
+              <div className="relative h-16 sm:h-20 w-52 sm:w-64 brightness-0 invert opacity-95 transition-opacity group-hover:opacity-100">
                 <Image
                   src="/assets/brand/palmshore-logo.png"
                   alt="Hotel Palmbeach Logo"
