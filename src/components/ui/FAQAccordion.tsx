@@ -15,13 +15,13 @@ export default function FAQAccordion() {
     <section className="py-20 lg:py-28 bg-[#FAF8F5] border-b border-[#EAE6DF]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#B89258] font-bold">
             Common Inquiries
           </span>
-          <h2 className="text-3xl sm:text-5xl font-light font-editorial text-neutral-900">
+          <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm text-neutral-600 font-light max-w-lg mx-auto">
+          <p className="text-sm text-neutral-700 font-medium max-w-lg mx-auto">
             Everything you need to know about your arrival, dining, room tariffs, and hospitality services.
           </p>
         </div>

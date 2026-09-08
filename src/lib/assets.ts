@@ -13,6 +13,7 @@ export const HOTEL_ASSETS = {
     neonSignage: "/assets/brand/hotel-neon-signage-night.jpeg",
   },
   exterior: {
+    heroPolished: "/assets/exterior/hero_polished.png",
     heroExteriorDay: "/assets/exterior/hotel-exterior-day.jpeg",
     receptionFountain: "/assets/exterior/reception-entrance-fountain.jpeg",
     buildingFacadeNight: "/assets/exterior/hotel-building-facade-night.jpeg",

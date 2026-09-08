@@ -46,16 +46,16 @@ export default function AmenitiesIntro() {
 
           {/* Right: Editorial Typography */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#B89258] font-bold">
               <span>Boutique Amenities & Hospitality</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light font-editorial text-[#1C1E1B] leading-[1.12]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-editorial text-[#111E18] leading-[1.12]">
               Everything You Need. <br className="hidden sm:inline" />
-              <span className="italic font-normal text-[#1B4332]">Nothing You Don&apos;t.</span>
+              <span className="italic font-bold text-[#1B4332]">Nothing You Don&apos;t.</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-neutral-600 font-light leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-neutral-700 font-medium leading-relaxed max-w-xl">
               At Hotel Palmbeach, luxury is defined by ease and serenity. We have pared away the superfluous to elevate what truly matters: restful beds, rejuvenating sea breezes, locally celebrated cuisine, and genuine personal care that anticipates your every wish.
             </p>
 

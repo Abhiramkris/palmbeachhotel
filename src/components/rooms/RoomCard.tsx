@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Bed, Users, Maximize2 } from "lucide-react";
+import { ArrowUpRight, Bed, Users, Maximize2, Check } from "lucide-react";
 import { RoomType } from "@/data/rooms";
 
 interface RoomCardProps {
@@ -13,78 +13,107 @@ export default function RoomCard({ room }: RoomCardProps) {
   return (
     <Link
       href={`/rooms/${room.slug}`}
-      className="group relative h-[480px] sm:h-[520px] rounded-3xl overflow-hidden block shadow-md hover:shadow-2xl transition-all duration-700 cursor-pointer"
+      className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-[#E7E2DA] shadow-sm hover:shadow-2xl hover:border-[#C5A880]/60 transition-all duration-500 cursor-pointer"
     >
-      {/* Background Image with subtle zoom on hover */}
-      <Image
-        src={room.primaryImage}
-        alt={room.name}
-        fill
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
+      {/* Top Image Banner with Floating Badges */}
+      <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-neutral-100 shrink-0">
+        <Image
+          src={room.primaryImage}
+          alt={room.name}
+          fill
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
 
-      {/* Dynamic Rising Dark/Green Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0F241A]/95 via-[#1B4332]/60 to-transparent transition-all duration-700 ease-out opacity-85 group-hover:opacity-95 group-hover:from-[#0F241A] group-hover:via-[#1B4332]/85 group-hover:to-black/30" />
+        {/* Top Badges: Rate Pill & Climate Type */}
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+          <div className="bg-[#0D1E16]/90 backdrop-blur-md border border-white/25 px-3.5 py-1.5 rounded-full text-white text-xs font-mono font-bold shadow-md">
+            ₹{room.rate.toLocaleString("en-IN")}{" "}
+            <span className="text-[10px] text-neutral-300 font-sans font-normal">/ night</span>
+          </div>
 
-      {/* Top badges: Rate & Air-Conditioning */}
-      <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-10">
-        <div className="bg-black/40 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-white text-xs font-mono font-medium">
-          ₹{room.rate.toLocaleString("en-IN")}{" "}
-          <span className="text-[10px] text-white/75 font-sans">/ night</span>
+          {room.airConditioned ? (
+            <span className="bg-[#1B4332]/95 backdrop-blur-md text-emerald-100 border border-emerald-400/40 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
+              Climate Control AC
+            </span>
+          ) : (
+            <span className="bg-[#6B4413]/95 backdrop-blur-md text-amber-100 border border-amber-400/40 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
+              Naturally Ventilated
+            </span>
+          )}
         </div>
-        {room.airConditioned ? (
-          <span className="bg-[#1B4332]/80 backdrop-blur-md text-emerald-200 border border-emerald-500/30 text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full">
-            Climate Control AC
+
+        {/* View Badge pinned over image bottom */}
+        <div className="absolute bottom-3 left-4 z-10">
+          <span className="inline-block px-3 py-1 rounded-full bg-black/70 backdrop-blur-xs text-[10px] uppercase tracking-[0.16em] text-[#EAD8C3] font-bold border border-white/15">
+            {room.view}
           </span>
-        ) : (
-          <span className="bg-amber-950/70 backdrop-blur-md text-amber-200 border border-amber-500/30 text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full">
-            Naturally Ventilated
-          </span>
-        )}
+        </div>
       </div>
 
-      {/* Bottom Content Area: slides upward on hover */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-10 text-white transform transition-transform duration-500 ease-out translate-y-6 group-hover:translate-y-0">
-        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold block mb-1">
-          {room.view}
-        </span>
-        <h3 className="text-2xl sm:text-3xl font-light font-editorial tracking-tight text-white mb-2">
-          {room.name}
-        </h3>
+      {/* Solid High-Contrast Card Body */}
+      <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-white">
+        <div>
+          {/* Room Name */}
+          <h3 className="text-2xl sm:text-[26px] font-bold font-editorial tracking-tight text-[#111E18] group-hover:text-[#1B4332] transition-colors leading-tight mb-3">
+            {room.name}
+          </h3>
 
-        {/* Basic specifications */}
-        <p className="text-xs text-neutral-300 font-light mb-4">
-          {room.bedType} · Up to {room.capacity.maxGuests} Guests · {room.size}
-        </p>
+          {/* Key Specifications Row */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-neutral-800 font-bold mb-4 py-2.5 px-3 bg-[#FBF9F5] rounded-xl border border-[#EFEBE4]">
+            <span className="flex items-center gap-1.5">
+              <Bed className="w-3.5 h-3.5 text-[#1B4332]" />
+              <span>{room.bedType}</span>
+            </span>
+            <span className="text-neutral-300">•</span>
+            <span className="flex items-center gap-1.5">
+              <Users className="w-3.5 h-3.5 text-[#1B4332]" />
+              <span>Up to {room.capacity.maxGuests} Guests</span>
+            </span>
+            <span className="text-neutral-300">•</span>
+            <span className="flex items-center gap-1.5">
+              <Maximize2 className="w-3.5 h-3.5 text-[#1B4332]" />
+              <span>{room.size}</span>
+            </span>
+          </div>
 
-        {/* Revealed details on hover */}
-        <div className="space-y-3 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden">
-          <p className="text-xs text-neutral-200 font-light leading-relaxed line-clamp-2">
+          {/* Description */}
+          <p className="text-xs sm:text-[13px] text-neutral-600 font-normal leading-relaxed line-clamp-2 mb-4">
             {room.shortDescription}
           </p>
 
-          <div className="flex items-center gap-4 text-[11px] text-neutral-300 pt-1 border-t border-white/10">
-            <span className="flex items-center gap-1">
-              <Bed className="w-3.5 h-3.5 text-[#C5A880]" />
-              {room.bedType}
-            </span>
-            <span className="flex items-center gap-1">
-              <Users className="w-3.5 h-3.5 text-[#C5A880]" />
-              {room.capacity.baseGuests} Guests
-            </span>
-            <span className="flex items-center gap-1">
-              <Maximize2 className="w-3.5 h-3.5 text-[#C5A880]" />
-              {room.size}
-            </span>
+          {/* Room Highlights Chips */}
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {room.highlights.slice(0, 2).map((highlight, idx) => (
+              <span
+                key={idx}
+                className="inline-flex items-center gap-1 text-[11px] font-medium bg-[#F5F2EC] text-neutral-800 px-2.5 py-1 rounded-md border border-[#E8E2D8]"
+              >
+                <Check className="w-3 h-3 text-[#1B4332] stroke-[2.5]" />
+                <span className="truncate max-w-[220px]">{highlight}</span>
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* Arrow / View Room CTA */}
-        <div className="mt-4 pt-3 flex items-center justify-between text-xs uppercase tracking-widest font-semibold text-[#C5A880] border-t border-white/15">
-          <span>View Room Details</span>
-          <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#C5A880] group-hover:text-neutral-900 flex items-center justify-center transition-all duration-300">
-            <ArrowUpRight className="w-4 h-4" />
+        {/* Card Footer: Tariff & Action CTA */}
+        <div className="pt-5 mt-4 border-t border-neutral-150 flex items-center justify-between">
+          <div>
+            <span className="text-[10px] uppercase tracking-wider text-neutral-500 font-bold block">
+              Official Tariff
+            </span>
+            <div className="flex items-baseline gap-1">
+              <span className="text-2xl font-black font-editorial tracking-tight text-[#1B4332]">
+                ₹{room.rate.toLocaleString("en-IN")}
+              </span>
+              <span className="text-xs text-neutral-500 font-medium">/ night</span>
+            </div>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#1B4332] group-hover:bg-[#112F23] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 shadow-sm group-hover:shadow-md">
+            <span>View Details</span>
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </div>
         </div>
       </div>

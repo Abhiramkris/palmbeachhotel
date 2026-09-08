@@ -26,10 +26,10 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
         {/* Section Header */}
         <div className="space-y-2">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#B89258] font-bold">
             Guest Reflections
           </span>
-          <h2 className="text-3xl sm:text-5xl font-light font-editorial text-neutral-900">
+          <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900">
             What Our Guests Say
           </h2>
         </div>
@@ -44,7 +44,7 @@ export default function Testimonials() {
           </div>
 
           {/* Large Quote */}
-          <blockquote className="text-xl sm:text-3xl lg:text-4xl font-editorial font-light text-neutral-900 leading-snug tracking-tight max-w-4xl mx-auto italic transition-all duration-500">
+          <blockquote className="text-xl sm:text-3xl lg:text-4xl font-editorial font-medium text-neutral-900 leading-snug tracking-tight max-w-4xl mx-auto italic transition-all duration-500">
             &ldquo;{active.quote}&rdquo;
           </blockquote>
 

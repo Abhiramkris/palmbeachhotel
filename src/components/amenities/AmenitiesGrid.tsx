@@ -25,10 +25,10 @@ export default function AmenitiesGrid() {
     <section id="amenities-grid" className="py-20 lg:py-24 bg-[#F5F2EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
+          <span className="text-xs uppercase tracking-widest text-[#B89258] font-bold">
             Comfort & Convenience
           </span>
-          <h3 className="text-3xl sm:text-4xl font-light font-editorial text-neutral-900 mt-2">
+          <h3 className="text-3xl sm:text-4xl font-bold font-editorial text-neutral-900 mt-2">
             Curated Services for Unhurried Living
           </h3>
         </div>
@@ -49,10 +49,10 @@ export default function AmenitiesGrid() {
                 <h4 className="text-xl font-bold font-editorial text-neutral-900 mb-2.5 transition-transform duration-300 group-hover:translate-x-1">
                   {amenity.name}
                 </h4>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed mb-4 transition-colors duration-300 group-hover:text-neutral-800">
+                <p className="text-sm text-neutral-700 font-normal leading-relaxed mb-4 transition-colors duration-300 group-hover:text-neutral-900">
                   {amenity.description}
                 </p>
-                <p className="text-xs text-neutral-500 italic font-serif">
+                <p className="text-xs text-neutral-600 font-semibold italic font-serif">
                   {amenity.detail}
                 </p>
               </div>

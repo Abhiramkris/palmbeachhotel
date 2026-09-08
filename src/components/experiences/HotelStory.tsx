@@ -20,24 +20,24 @@ export default function HotelStory() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left: Kinetic Editorial Typography */}
           <div className="lg:col-span-7 space-y-8">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold block">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#E5D0B5] font-bold block">
               The Palmbeach Philosophy
             </span>
 
             {/* Kinetic / Editorial Heading */}
             <div className="space-y-1">
-              <h2 className="text-5xl sm:text-7xl lg:text-8xl font-light font-editorial tracking-tight leading-[0.95]">
+              <h2 className="text-5xl sm:text-7xl lg:text-8xl font-bold font-editorial tracking-tight leading-[0.95]">
                 <span className="block transition-transform duration-700 hover:translate-x-2">Arrive.</span>
-                <span className="block italic text-[#C5A880] font-normal transition-transform duration-700 hover:translate-x-2">Breathe.</span>
-                <span className="block text-white/90 transition-transform duration-700 hover:translate-x-2">Stay Awhile.</span>
+                <span className="block italic text-[#E5D0B5] font-bold transition-transform duration-700 hover:translate-x-2">Breathe.</span>
+                <span className="block text-white transition-transform duration-700 hover:translate-x-2">Stay Awhile.</span>
               </h2>
             </div>
 
-            <div className="space-y-4 max-w-xl text-neutral-200 font-light text-base sm:text-lg leading-relaxed pt-2">
+            <div className="space-y-4 max-w-xl text-neutral-100 font-medium text-base sm:text-lg leading-relaxed pt-2">
               <p>
                 Nestled along a tranquil coastal corridor, Hotel Palmbeach was conceived as an antidote to hurried modern life. From the gentle rustle of towering coconut palms at daybreak to the warm reflection of evening lanterns upon the fountain courtyard, time slows to the rhythm of the tides.
               </p>
-              <p className="text-sm text-neutral-300">
+              <p className="text-sm text-neutral-200 font-normal">
                 Whether sharing conversations over authentic local coastal cuisine, resting in quiet air-conditioned suites, or stepping out to secluded shorelines, every moment is an invitation to unwind.
               </p>
             </div>

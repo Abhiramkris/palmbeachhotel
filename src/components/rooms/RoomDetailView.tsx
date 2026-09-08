@@ -100,13 +100,13 @@ export default function RoomDetailView({ room }: RoomDetailViewProps) {
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
               <div className="space-y-2 max-w-2xl">
-                <span className="text-xs uppercase tracking-[0.25em] text-emerald-300 font-semibold">
+                <span className="text-xs uppercase tracking-[0.25em] text-emerald-300 font-bold">
                   {room.view}
                 </span>
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light font-editorial tracking-tight text-white leading-tight">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-editorial tracking-tight text-white leading-tight">
                   {room.name}
                 </h1>
-                <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+                <p className="text-sm sm:text-base text-neutral-200 font-medium leading-relaxed">
                   {room.tagline}
                 </p>
               </div>

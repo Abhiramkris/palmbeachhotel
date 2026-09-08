@@ -22,16 +22,16 @@ export default function FinalCTA({ onOpenBooking }: FinalCTAProps) {
       <div className="absolute inset-0 bg-gradient-to-t from-[#0F241A] via-black/50 to-[#0F241A]/70" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <span className="inline-block text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold">
+        <span className="inline-block text-xs uppercase tracking-[0.3em] text-[#E5D0B5] font-bold">
           Reserve Your Escape
         </span>
 
-        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-light font-editorial tracking-tight text-white leading-tight">
+        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight text-white leading-tight">
           Your Palmbeach Escape <br />
-          <span className="italic font-normal text-[#FAF8F5]">Starts Here.</span>
+          <span className="italic font-bold text-[#E5D0B5]">Starts Here.</span>
         </h2>
 
-        <p className="text-base sm:text-xl text-neutral-200 font-light max-w-xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-xl text-neutral-100 font-medium max-w-xl mx-auto leading-relaxed">
           Make your next stay something worth remembering. Unhurried mornings, tranquil gardens, and ocean whispers await.
         </p>
 

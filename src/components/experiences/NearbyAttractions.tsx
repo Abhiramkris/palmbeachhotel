@@ -11,13 +11,13 @@ export default function NearbyAttractions() {
         {/* Section Heading */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
           <div className="space-y-2 max-w-xl">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#B89258] font-bold">
               Destination & Surroundings
             </span>
-            <h2 className="text-3xl sm:text-5xl font-light font-editorial text-neutral-900 leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900 leading-tight">
               Curated Coastal Attractions
             </h2>
-            <p className="text-sm text-neutral-600 font-light">
+            <p className="text-sm text-neutral-700 font-medium">
               Explore serene shorelines, historic landmarks, and vibrant spice bazaars within minutes of Hotel Palmbeach.
             </p>
           </div>

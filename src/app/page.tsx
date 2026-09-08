@@ -70,35 +70,35 @@ export default function Home() {
       <main className="flex-1">
         {/* 2. HERO SECTION */}
         <section className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center pt-24 pb-16 lg:py-0 overflow-hidden">
-          {/* Large Cinematic Background Photograph with open evening sky */}
+          {/* Large Cinematic Background Photograph using hero_polished.png */}
           <Image
-            src={HOTEL_ASSETS.exterior.heroExteriorDay}
-            alt="Hotel Palmbeach courtyard and palm trees in evening light"
+            src={HOTEL_ASSETS.exterior.heroPolished}
+            alt="Hotel Palmbeach illuminated courtyard and palm trees in evening light"
             fill
-            className="object-cover brightness-70 scale-102"
+            className="object-cover brightness-75 scale-102"
             priority
           />
 
-          {/* Golden-hour / early-evening atmosphere gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F241A]/90 via-transparent to-black/40" />
+          {/* High-contrast evening atmosphere gradient overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1A13]/95 via-black/20 to-black/50" />
 
           {/* Hero Content Container */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* Left Column: Editorial Headline & Storytelling */}
               <div className="lg:col-span-7 space-y-6 text-white max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-emerald-200 text-xs font-semibold tracking-wider uppercase">
-                  <Sparkles className="w-3.5 h-3.5 text-[#C5A880]" />
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/25 text-emerald-200 text-xs font-bold tracking-wider uppercase shadow-md">
+                  <Sparkles className="w-4 h-4 text-[#E5D0B5]" />
                   <span>Boutique Tropical Resort</span>
                 </div>
 
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light font-editorial tracking-tight leading-[1.05] drop-shadow-md text-white">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
                   Stay Where Palm Trees <br className="hidden sm:inline" />
-                  <span className="italic font-normal text-[#C5A880]">Meet the Sea.</span>
+                  <span className="italic font-bold text-[#E5D0B5]">Meet the Sea.</span>
                 </h1>
 
-                <p className="text-base sm:text-xl text-neutral-200 font-light leading-relaxed max-w-xl">
+                <p className="text-base sm:text-xl text-neutral-100 font-medium leading-relaxed max-w-xl drop-shadow-md">
                   A peaceful tropical escape designed for slow mornings, beautiful evenings, and unforgettable stays.
                 </p>
 
@@ -106,34 +106,34 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-4 pt-2">
                   <a
                     href="#rooms"
-                    className="px-8 py-3.5 bg-[#E05332] hover:bg-[#C94324] text-white text-xs uppercase tracking-widest font-semibold rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+                    className="px-8 py-3.5 bg-[#E05332] hover:bg-[#C94324] text-white text-xs uppercase tracking-widest font-bold rounded-full shadow-xl transition-all duration-300 hover:scale-105"
                   >
-                    Explore Rooms
+                    Explore Rooms & Rates
                   </a>
                   <a
                     href="#experiences"
-                    className="px-8 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white text-xs uppercase tracking-widest font-semibold rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2"
+                    className="px-8 py-3.5 bg-white/20 hover:bg-white/30 border border-white/40 text-white text-xs uppercase tracking-widest font-bold rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2"
                   >
                     <span>Discover Palmbeach</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
 
-                {/* Subtle trust signal */}
-                <div className="pt-4 flex items-center gap-6 text-xs text-neutral-300 font-light border-t border-white/15 max-w-md">
+                {/* Subtle trust signal with bold contrast */}
+                <div className="pt-4 flex items-center gap-6 text-xs text-neutral-200 font-medium border-t border-white/20 max-w-md">
                   <div>
-                    <span className="font-semibold text-white block">Official Tariff</span>
-                    <span>Direct Desk Rates</span>
+                    <span className="font-bold text-white block">Official Tariff</span>
+                    <span className="text-neutral-300">Direct Desk Rates</span>
                   </div>
-                  <div className="h-6 w-[1px] bg-white/20" />
+                  <div className="h-6 w-[1px] bg-white/30" />
                   <div>
-                    <span className="font-semibold text-white block">24/7 Front Desk</span>
-                    <span>Personal Concierge</span>
+                    <span className="font-bold text-white block">24/7 Front Desk</span>
+                    <span className="text-neutral-300">Personal Concierge</span>
                   </div>
-                  <div className="h-6 w-[1px] bg-white/20" />
+                  <div className="h-6 w-[1px] bg-white/30" />
                   <div>
-                    <span className="font-semibold text-white block">Coastal Cuisine</span>
-                    <span>Fresh & Authentic</span>
+                    <span className="font-bold text-white block">Coastal Cuisine</span>
+                    <span className="text-neutral-300">Fresh & Authentic</span>
                   </div>
                 </div>
               </div>
@@ -160,20 +160,20 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="space-y-3 max-w-2xl">
-                <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+                <span className="text-xs uppercase tracking-[0.25em] text-[#B89258] font-bold">
                   Accommodations & Suites
                 </span>
-                <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light font-editorial text-neutral-900 leading-tight">
+                <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-editorial text-neutral-900 leading-tight">
                   Find Your Perfect Stay.
                 </h2>
-                <p className="text-base text-neutral-600 font-light leading-relaxed">
+                <p className="text-base text-neutral-700 font-medium leading-relaxed">
                   Immerse yourself in understated luxury. From naturally ventilated coastal havens to grand presidential suites, every room is tailored for serenity and restorative rest.
                 </p>
               </div>
 
-              <div className="text-right shrink-0">
-                <span className="text-xs font-mono text-neutral-500 block">Official Tariff Schedule</span>
-                <span className="text-xs text-[#1B4332] font-semibold">Extra Person: ₹400 · Tax Applicable</span>
+              <div className="text-right shrink-0 bg-white p-3.5 rounded-2xl border border-[#E7E2DA] shadow-xs">
+                <span className="text-xs font-mono text-neutral-500 block font-semibold">Official Tariff Schedule</span>
+                <span className="text-xs text-[#1B4332] font-bold">Extra Person: ₹400 · Tax Applicable</span>
               </div>
             </div>
 
@@ -202,13 +202,13 @@ export default function Home() {
         <section id="gallery" className="py-20 lg:py-28 bg-white border-b border-[#EAE6DF]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-              <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#B89258] font-bold">
                 Visual Journey
               </span>
-              <h2 className="text-3xl sm:text-5xl font-light font-editorial text-neutral-900">
+              <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900">
                 Moments at Hotel Palmbeach
               </h2>
-              <p className="text-sm text-neutral-600 font-light">
+              <p className="text-sm sm:text-base text-neutral-700 font-medium">
                 Glimpses of tranquil suites, culinary flavors, event venues, and sunlit courtyards.
               </p>
 
