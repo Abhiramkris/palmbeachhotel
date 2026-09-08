@@ -24,28 +24,40 @@ export default function Home() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [bookingParams, setBookingParams] = useState<{
     roomSlug: string;
-    checkIn: string;
-    checkOut: string;
-    guests: number;
-    rooms: number;
+    name?: string;
+    phone?: string;
+    email?: string;
+    isConfirmed?: boolean;
   }>({
     roomSlug: HOTEL_ROOMS[0].slug,
-    checkIn: "",
-    checkOut: "",
-    guests: 2,
-    rooms: 1,
   });
 
   const [activeGalleryFilter, setActiveGalleryFilter] = useState<string>("all");
 
-  const handleHeroSearch = (params: {
+  const handleHeroInquiry = (params: {
     roomSlug: string;
-    checkIn: string;
-    checkOut: string;
-    guests: number;
-    rooms: number;
+    name: string;
+    phone: string;
+    email: string;
   }) => {
-    setBookingParams(params);
+    setBookingParams({
+      roomSlug: params.roomSlug,
+      name: params.name,
+      phone: params.phone,
+      email: params.email,
+      isConfirmed: true,
+    });
+    setBookingModalOpen(true);
+  };
+
+  const handleOpenBooking = (slug?: string) => {
+    setBookingParams({
+      roomSlug: slug || HOTEL_ROOMS[0].slug,
+      name: "",
+      phone: "",
+      email: "",
+      isConfirmed: false,
+    });
     setBookingModalOpen(true);
   };
 
@@ -65,7 +77,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF8F5] text-[#1C1E1B]">
       {/* 1. Reusable Sticky Navbar */}
-      <Navbar onOpenBooking={() => setBookingModalOpen(true)} />
+      <Navbar onOpenBooking={() => handleOpenBooking()} />
 
       <main className="flex-1">
         {/* 2. HERO SECTION */}
@@ -135,7 +147,7 @@ export default function Home() {
 
               {/* Right Column: Floating Booking Form (Inspired by reference search card) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <FloatingBookingForm onSearch={handleHeroSearch} />
+                <FloatingBookingForm onSubmitInquiry={handleHeroInquiry} />
               </div>
             </div>
           </div>
@@ -191,7 +203,7 @@ export default function Home() {
         <Testimonials />
 
         {/* 11. BANQUET HALL & DINING VENUES */}
-        <BanquetAndDining onOpenBooking={() => setBookingModalOpen(true)} />
+        <BanquetAndDining onOpenBooking={(slug) => handleOpenBooking(slug || "grand-banquet-hall")} />
 
         {/* Filterable Photo Gallery Section */}
         <section id="gallery" className="py-20 lg:py-28 bg-white border-b border-[#EAE6DF]">
@@ -256,7 +268,7 @@ export default function Home() {
         <FAQAccordion />
 
         {/* 13. FINAL BOOKING CTA */}
-        <FinalCTA onOpenBooking={() => setBookingModalOpen(true)} />
+        <FinalCTA onOpenBooking={() => handleOpenBooking()} />
       </main>
 
       {/* 14. REUSABLE FOOTER */}
@@ -267,10 +279,10 @@ export default function Home() {
         isOpen={bookingModalOpen}
         onClose={() => setBookingModalOpen(false)}
         preselectedRoomSlug={bookingParams.roomSlug}
-        initialCheckIn={bookingParams.checkIn}
-        initialCheckOut={bookingParams.checkOut}
-        initialGuests={bookingParams.guests}
-        initialRooms={bookingParams.rooms}
+        initialName={bookingParams.name}
+        initialPhone={bookingParams.phone}
+        initialEmail={bookingParams.email}
+        initialSubmitted={bookingParams.isConfirmed}
       />
     </div>
   );

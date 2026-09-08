@@ -5,7 +5,7 @@ import { Users, Mic, Sparkles, Utensils, CheckCircle2, Calendar } from "lucide-r
 import { HOTEL_ASSETS } from "@/lib/assets";
 
 interface BanquetAndDiningProps {
-  onOpenBooking: () => void;
+  onOpenBooking: (slug?: string) => void;
 }
 
 export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProps) {
@@ -124,7 +124,7 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
 
               <div className="pt-3">
                 <button
-                  onClick={onOpenBooking}
+                  onClick={() => onOpenBooking("grand-banquet-hall")}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[#1B4332] hover:bg-[#123124] text-white text-xs font-bold uppercase tracking-widest rounded-2xl transition shadow-md hover:shadow-lg cursor-pointer"
                 >
                   <Calendar className="w-4 h-4 text-[#E5D0B5]" />
@@ -189,6 +189,16 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                   <span className="font-bold text-neutral-900 block text-sm">Room Service</span>
                   <span>24 Hours Available</span>
                 </div>
+              </div>
+
+              <div className="pt-4">
+                <button
+                  onClick={() => onOpenBooking("palmshore-restaurant")}
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#1B4332] hover:bg-[#123124] text-white text-xs font-bold uppercase tracking-widest rounded-2xl transition shadow-md hover:shadow-lg cursor-pointer"
+                >
+                  <Utensils className="w-4 h-4 text-[#E5D0B5]" />
+                  <span>Reserve Table / Dining</span>
+                </button>
               </div>
             </div>
 

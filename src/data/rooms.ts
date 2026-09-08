@@ -30,6 +30,23 @@ export interface RoomType {
 export const EXTRA_PERSON_RATE = 400;
 export const TAX_PERCENTAGE = 12;
 
+export interface BookingTypeOption {
+  slug: string;
+  name: string;
+  category: "room" | "venue" | "dining";
+  rateLabel: string;
+}
+
+export const ALL_BOOKING_TYPES: BookingTypeOption[] = [
+  { slug: "standard-non-ac", name: "Standard Non-A/C Room", category: "room", rateLabel: "₹1,870 / night" },
+  { slug: "standard-ac", name: "Standard A/C Room", category: "room", rateLabel: "₹2,140 / night" },
+  { slug: "executive-room", name: "Executive Room", category: "room", rateLabel: "₹2,530 / night" },
+  { slug: "suite-room", name: "Suite Room", category: "room", rateLabel: "₹2,960 / night" },
+  { slug: "premium-suite", name: "Premium Suite Room", category: "room", rateLabel: "₹3,470 / night" },
+  { slug: "grand-banquet-hall", name: "Grand Banquet Hall", category: "venue", rateLabel: "250+ Capacity Event Dais" },
+  { slug: "palmshore-restaurant", name: "Palmshore Restaurant & Dining", category: "dining", rateLabel: "Table & Group Dining" },
+];
+
 export const HOTEL_ROOMS: RoomType[] = [
   {
     slug: "standard-non-ac",

@@ -1,44 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, Users, Home, BedDouble, Search, Sparkles } from "lucide-react";
-import { HOTEL_ROOMS } from "@/data/rooms";
+import { User, Phone, Mail, Hotel, ArrowRight, PhoneCall } from "lucide-react";
+import { ALL_BOOKING_TYPES } from "@/data/rooms";
 
 interface FloatingBookingFormProps {
-  onSearch: (params: {
+  onSubmitInquiry: (params: {
     roomSlug: string;
-    checkIn: string;
-    checkOut: string;
-    guests: number;
-    rooms: number;
+    name: string;
+    phone: string;
+    email: string;
   }) => void;
 }
 
-export default function FloatingBookingForm({ onSearch }: FloatingBookingFormProps) {
-  const [selectedSlug, setSelectedSlug] = useState(HOTEL_ROOMS[0].slug);
-  const [checkIn, setCheckIn] = useState(() => {
-    const today = new Date();
-    return today.toISOString().split("T")[0];
-  });
-  const [checkOut, setCheckOut] = useState(() => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    return tomorrow.toISOString().split("T")[0];
-  });
-  const [guests, setGuests] = useState(2);
-  const [rooms, setRooms] = useState(1);
-
-  const selectedRoom =
-    HOTEL_ROOMS.find((r) => r.slug === selectedSlug) || HOTEL_ROOMS[0];
+export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBookingFormProps) {
+  const [selectedSlug, setSelectedSlug] = useState(ALL_BOOKING_TYPES[0].slug);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSearch({
+    onSubmitInquiry({
       roomSlug: selectedSlug,
-      checkIn,
-      checkOut,
-      guests,
-      rooms,
+      name,
+      phone,
+      email,
     });
   };
 
@@ -46,35 +33,44 @@ export default function FloatingBookingForm({ onSearch }: FloatingBookingFormPro
     <div className="w-full max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-white/60 text-[#1C1E1B] transition-all duration-300">
       <div className="space-y-1 mb-5">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-[10px] font-semibold tracking-wider uppercase text-emerald-900">
-          <Sparkles className="w-3 h-3 text-[#C5A880]" />
-          <span>Direct Booking Privilege</span>
+          <PhoneCall className="w-3 h-3 text-[#1B4332]" />
+          <span>Quick Reservation</span>
         </div>
         <h3 className="text-xl sm:text-2xl font-bold font-editorial text-neutral-900">
-          Reserve Your Tropical Stay
+          Book Your Stay Directly
         </h3>
         <p className="text-xs text-neutral-500 font-light">
-          Best guaranteed rates directly from our resort desk
+          Submit details below — our front desk will call you to confirm
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Room Type Selector */}
+      <form onSubmit={handleSubmit} className="space-y-3.5">
+        {/* 1. Type */}
         <div>
-          <label className="block text-[11px] font-semibold text-neutral-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-            <BedDouble className="w-3.5 h-3.5 text-emerald-800" />
-            <span>Room Category</span>
+          <label className="block text-[11px] font-bold text-neutral-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <Hotel className="w-3.5 h-3.5 text-[#1B4332]" />
+            <span>Type (Room / Venue) *</span>
           </label>
           <div className="relative">
             <select
               value={selectedSlug}
               onChange={(e) => setSelectedSlug(e.target.value)}
-              className="w-full appearance-none bg-neutral-50/80 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-emerald-800 focus:bg-white transition cursor-pointer pr-8"
+              className="w-full appearance-none bg-neutral-50/90 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-[#1B4332] focus:bg-white transition cursor-pointer pr-8"
             >
-              {HOTEL_ROOMS.map((room) => (
-                <option key={room.slug} value={room.slug}>
-                  {room.name} — ₹{room.rate.toLocaleString("en-IN")}/night
-                </option>
-              ))}
+              <optgroup label="Rooms & Suites">
+                {ALL_BOOKING_TYPES.filter((t) => t.category === "room").map((item) => (
+                  <option key={item.slug} value={item.slug}>
+                    {item.name} — {item.rateLabel}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="Venues & Dining">
+                {ALL_BOOKING_TYPES.filter((t) => t.category !== "room").map((item) => (
+                  <option key={item.slug} value={item.slug}>
+                    {item.name} ({item.rateLabel})
+                  </option>
+                ))}
+              </optgroup>
             </select>
             <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 text-xs">
               ▼
@@ -82,84 +78,60 @@ export default function FloatingBookingForm({ onSearch }: FloatingBookingFormPro
           </div>
         </div>
 
-        {/* Dates row */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-[11px] font-semibold text-neutral-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-emerald-800" />
-              <span>Check-in</span>
-            </label>
-            <input
-              type="date"
-              required
-              value={checkIn}
-              onChange={(e) => setCheckIn(e.target.value)}
-              className="w-full bg-neutral-50/80 border border-neutral-200 rounded-xl px-3 py-2 text-xs font-medium text-neutral-800 focus:outline-emerald-800 focus:bg-white transition"
-            />
-          </div>
-
-          <div>
-            <label className="block text-[11px] font-semibold text-neutral-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-emerald-800" />
-              <span>Check-out</span>
-            </label>
-            <input
-              type="date"
-              required
-              value={checkOut}
-              onChange={(e) => setCheckOut(e.target.value)}
-              className="w-full bg-neutral-50/80 border border-neutral-200 rounded-xl px-3 py-2 text-xs font-medium text-neutral-800 focus:outline-emerald-800 focus:bg-white transition"
-            />
-          </div>
+        {/* 2. Name */}
+        <div>
+          <label className="block text-[11px] font-bold text-neutral-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <User className="w-3.5 h-3.5 text-[#1B4332]" />
+            <span>Full Name *</span>
+          </label>
+          <input
+            type="text"
+            required
+            placeholder="e.g. Maya Varma"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full bg-neutral-50/90 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-[#1B4332] focus:bg-white transition"
+          />
         </div>
 
-        {/* Capacity row */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-[11px] font-semibold text-neutral-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-emerald-800" />
-              <span>Guests</span>
-            </label>
-            <select
-              value={guests}
-              onChange={(e) => setGuests(parseInt(e.target.value))}
-              className="w-full appearance-none bg-neutral-50/80 border border-neutral-200 rounded-xl px-3.5 py-2 text-xs font-medium text-neutral-800 focus:outline-emerald-800 focus:bg-white transition cursor-pointer"
-            >
-              <option value={1}>1 Guest</option>
-              <option value={2}>2 Guests</option>
-              <option value={3}>3 Guests (+₹400/n)</option>
-              <option value={4}>4 Guests</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-[11px] font-semibold text-neutral-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Home className="w-3.5 h-3.5 text-emerald-800" />
-              <span>Rooms</span>
-            </label>
-            <select
-              value={rooms}
-              onChange={(e) => setRooms(parseInt(e.target.value))}
-              className="w-full appearance-none bg-neutral-50/80 border border-neutral-200 rounded-xl px-3.5 py-2 text-xs font-medium text-neutral-800 focus:outline-emerald-800 focus:bg-white transition cursor-pointer"
-            >
-              <option value={1}>1 Room</option>
-              <option value={2}>2 Rooms</option>
-              <option value={3}>3 Rooms</option>
-            </select>
-          </div>
+        {/* 3. Number */}
+        <div>
+          <label className="block text-[11px] font-bold text-neutral-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <Phone className="w-3.5 h-3.5 text-[#1B4332]" />
+            <span>Phone / WhatsApp Number *</span>
+          </label>
+          <input
+            type="tel"
+            required
+            placeholder="+91 98765 43210"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full bg-neutral-50/90 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-[#1B4332] focus:bg-white transition"
+          />
         </div>
 
-        {/* Selected Rate Preview */}
-        <div className="pt-2 pb-1 flex items-center justify-between border-t border-neutral-100 text-xs">
-          <span className="text-neutral-500 font-light">
-            Base Tariff ({selectedRoom.bedType})
+        {/* 4. Email */}
+        <div>
+          <label className="block text-[11px] font-bold text-neutral-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <Mail className="w-3.5 h-3.5 text-[#1B4332]" />
+            <span>Email Address *</span>
+          </label>
+          <input
+            type="email"
+            required
+            placeholder="name@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full bg-neutral-50/90 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-[#1B4332] focus:bg-white transition"
+          />
+        </div>
+
+        {/* Confirmation Call Promise */}
+        <div className="bg-[#FAF6F0] p-3 rounded-xl border border-[#EAE2D5] flex items-start gap-2.5 text-[11px] text-neutral-700 leading-snug">
+          <PhoneCall className="w-4 h-4 text-[#1B4332] shrink-0 mt-0.5" />
+          <span>
+            <strong className="text-[#1B4332] font-semibold">Confirmation Call:</strong> There will be a confirmation call from our end to finalize dates and booking.
           </span>
-          <div className="text-right">
-            <span className="font-mono font-bold text-sm text-[#1B4332]">
-              ₹{selectedRoom.rate.toLocaleString("en-IN")}
-            </span>
-            <span className="text-[10px] text-neutral-400 block">+ tax as applicable</span>
-          </div>
         </div>
 
         {/* Submit Button */}
@@ -167,8 +139,8 @@ export default function FloatingBookingForm({ onSearch }: FloatingBookingFormPro
           type="submit"
           className="w-full py-3.5 px-6 rounded-2xl bg-[#E05332] hover:bg-[#C94324] text-white font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
         >
-          <Search className="w-4 h-4" />
-          <span>Check Availability</span>
+          <span>Request Booking Call</span>
+          <ArrowRight className="w-4 h-4" />
         </button>
       </form>
     </div>
