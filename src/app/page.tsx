@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingBookingForm from "@/components/booking/FloatingBookingForm";
@@ -122,6 +122,16 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* Left Column: Editorial Headline & Storytelling */}
               <div className="lg:col-span-7 space-y-6 text-white max-w-2xl">
+                {/* 3-Star Hotel Badge */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-xs font-semibold text-[#E5D0B5] shadow-lg">
+                  <div className="flex items-center gap-0.5 text-amber-400">
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  </div>
+                  <span className="uppercase tracking-widest text-[11px] font-bold">3-Star Hotel · Palakkad</span>
+                </div>
+
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
                   Stay Where Palm Trees <br className="hidden sm:inline" />
                   <span className="italic font-bold text-[#E5D0B5]">Meet Serenity.</span>
@@ -148,8 +158,8 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* Direct Trust Badges */}
-                <div className="pt-3 flex flex-wrap items-center gap-3 text-xs text-neutral-200 font-medium">
+                {/* Direct Trust Badges - Hidden on mobile view */}
+                <div className="pt-3 hidden sm:flex flex-wrap items-center gap-3 text-xs text-neutral-200 font-medium">
                   <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Direct Desk Rates</span>
                   <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">24/7 Reception</span>
                   <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Fresh Palmshore Dining</span>
