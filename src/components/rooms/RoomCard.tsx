@@ -15,7 +15,7 @@ export default function RoomCard({ room }: RoomCardProps) {
       href={`/rooms/${room.slug}`}
       className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-[#E7E2DA] shadow-sm hover:shadow-2xl hover:border-[#C5A880]/60 transition-all duration-500 cursor-pointer"
     >
-      {/* Top Image Banner with Floating Badges */}
+      {/* Top Image Banner - Pure & Clean without floating badge clutter */}
       <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-neutral-100 shrink-0">
         <Image
           src={room.primaryImage}
@@ -24,31 +24,14 @@ export default function RoomCard({ room }: RoomCardProps) {
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
 
-        {/* Top Badges: Rate Pill & Climate Type */}
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+        {/* Clean Rate Tag */}
+        <div className="absolute top-4 left-4 z-10">
           <div className="bg-[#0D1E16]/90 backdrop-blur-md border border-white/25 px-3.5 py-1.5 rounded-full text-white text-xs font-mono font-bold shadow-md">
             ₹{room.rate.toLocaleString("en-IN")}{" "}
             <span className="text-[10px] text-neutral-300 font-sans font-normal">/ night</span>
           </div>
-
-          {room.airConditioned ? (
-            <span className="bg-[#1B4332]/95 backdrop-blur-md text-emerald-100 border border-emerald-400/40 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
-              Climate Control AC
-            </span>
-          ) : (
-            <span className="bg-[#6B4413]/95 backdrop-blur-md text-amber-100 border border-amber-400/40 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-md">
-              Naturally Ventilated
-            </span>
-          )}
-        </div>
-
-        {/* View Badge pinned over image bottom */}
-        <div className="absolute bottom-3 left-4 z-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-black/70 backdrop-blur-xs text-[10px] uppercase tracking-[0.16em] text-[#EAD8C3] font-bold border border-white/15">
-            {room.view}
-          </span>
         </div>
       </div>
 
@@ -61,10 +44,14 @@ export default function RoomCard({ room }: RoomCardProps) {
           </h3>
 
           {/* Key Specifications Row */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-neutral-800 font-bold mb-4 py-2.5 px-3 bg-[#FBF9F5] rounded-xl border border-[#EFEBE4]">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-neutral-800 font-bold mb-4 py-2.5 px-3 bg-[#FBF9F5] rounded-xl border border-[#EFEBE4]">
             <span className="flex items-center gap-1.5">
               <Bed className="w-3.5 h-3.5 text-[#1B4332]" />
               <span>{room.bedType}</span>
+            </span>
+            <span className="text-neutral-300">•</span>
+            <span className={room.airConditioned ? "text-emerald-800" : "text-amber-800"}>
+              {room.airConditioned ? "Climate A/C" : "Non-A/C"}
             </span>
             <span className="text-neutral-300">•</span>
             <span className="flex items-center gap-1.5">

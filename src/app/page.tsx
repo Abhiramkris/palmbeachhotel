@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingBookingForm from "@/components/booking/FloatingBookingForm";
@@ -14,7 +14,7 @@ import RoomCard from "@/components/rooms/RoomCard";
 import FullScreenImageScroll from "@/components/experiences/FullScreenImageScroll";
 import HotelStory from "@/components/experiences/HotelStory";
 import Testimonials from "@/components/experiences/Testimonials";
-import NearbyAttractions from "@/components/experiences/NearbyAttractions";
+import BanquetAndDining from "@/components/venues/BanquetAndDining";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import FinalCTA from "@/components/ui/FinalCTA";
 import { HOTEL_ROOMS } from "@/data/rooms";
@@ -88,11 +88,6 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* Left Column: Editorial Headline & Storytelling */}
               <div className="lg:col-span-7 space-y-6 text-white max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/25 text-emerald-200 text-xs font-bold tracking-wider uppercase shadow-md">
-                  <Sparkles className="w-4 h-4 text-[#E5D0B5]" />
-                  <span>Boutique Tropical Resort</span>
-                </div>
-
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
                   Stay Where Palm Trees <br className="hidden sm:inline" />
                   <span className="italic font-bold text-[#E5D0B5]">Meet the Sea.</span>
@@ -195,8 +190,8 @@ export default function Home() {
         {/* 10. TESTIMONIALS */}
         <Testimonials />
 
-        {/* 11. NEARBY ATTRACTIONS */}
-        <NearbyAttractions />
+        {/* 11. BANQUET HALL & DINING VENUES */}
+        <BanquetAndDining onOpenBooking={() => setBookingModalOpen(true)} />
 
         {/* Filterable Photo Gallery Section */}
         <section id="gallery" className="py-20 lg:py-28 bg-white border-b border-[#EAE6DF]">
