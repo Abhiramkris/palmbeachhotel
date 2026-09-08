@@ -109,13 +109,13 @@ export default function Home() {
             src={HOTEL_ASSETS.exterior.heroPolished}
             alt="Hotel Palmbeach illuminated courtyard and palm trees in evening light"
             fill
-            className="object-cover brightness-75 scale-102"
+            className="object-cover brightness-95 scale-102"
             priority
           />
 
-          {/* High-contrast evening atmosphere gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1A13]/95 via-black/20 to-black/50" />
+          {/* Gentle cinematic gradient overlays that preserve photo brilliance while ensuring crisp text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30" />
 
           {/* Hero Content Container */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
