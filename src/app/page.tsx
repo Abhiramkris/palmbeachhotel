@@ -124,11 +124,11 @@ export default function Home() {
               <div className="lg:col-span-7 space-y-6 text-white max-w-2xl">
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
                   Stay Where Palm Trees <br className="hidden sm:inline" />
-                  <span className="italic font-bold text-[#E5D0B5]">Meet the Sea.</span>
+                  <span className="italic font-bold text-[#E5D0B5]">Meet Serenity.</span>
                 </h1>
 
                 <p className="text-base sm:text-xl text-neutral-100 font-medium leading-relaxed max-w-xl drop-shadow-md">
-                  Tranquil coastal resort in Trivandrum with verified tariffs and heartfelt hospitality.
+                  Tranquil resort in Palakkad with verified tariffs and heartfelt Kerala hospitality.
                 </p>
 
                 {/* CTAs */}
@@ -152,7 +152,7 @@ export default function Home() {
                 <div className="pt-3 flex flex-wrap items-center gap-3 text-xs text-neutral-200 font-medium">
                   <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Direct Desk Rates</span>
                   <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">24/7 Reception</span>
-                  <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Fresh Coastal Dining</span>
+                  <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Fresh Palmshore Dining</span>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ export default function Home() {
                   Find Your Perfect Stay.
                 </h2>
                 <p className="text-base text-neutral-700 font-medium leading-relaxed">
-                  Five transparent room categories designed for restorative coastal rest.
+                  Five transparent room categories designed for restorative, unhurried rest.
                 </p>
               </div>
 

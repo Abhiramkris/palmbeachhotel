@@ -4,10 +4,10 @@ export default function MarqueeStrip() {
   const items = [
     "HOTEL PALMBEACH",
     "TROPICAL ESCAPE",
-    "YOUR HOME BY THE SEA",
+    "YOUR SANCTUARY IN PALAKKAD",
     "RELAX",
     "UNWIND",
-    "AUTHENTIC COASTAL LUXURY",
+    "AUTHENTIC KERALA HOSPITALITY",
     "EXPERIENCE PALMBEACH",
     "GOURMET DINING",
     "SERENE PALM GROVES",

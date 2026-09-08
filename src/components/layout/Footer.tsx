@@ -34,11 +34,11 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-neutral-400 font-light leading-relaxed max-w-sm">
-              A tranquil coastal sanctuary in Trivandrum offering boutique rooms, conference banquets, and authentic dining.
+              A tranquil sanctuary in Palakkad offering boutique rooms, conference banquets, and authentic dining.
             </p>
             <div className="pt-2">
               <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
-                ★ Coastal Luxury & Hospitality
+                ★ Boutique Hospitality in Palakkad
               </span>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-neutral-400 font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-1" />
-                <span>Hotel Palmbeach, Beach Road, Coastal Boulevard, 670001</span>
+                <span>Hotel Palmbeach, Palakkad, Kerala, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />

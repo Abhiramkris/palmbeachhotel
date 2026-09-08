@@ -152,13 +152,13 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
               </h2>
 
               <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
-                Authentic coastal catch, Kerala specialties, and multi-cuisine dining prepared with fresh local ingredients.
+                Authentic Kerala specialties, traditional feasts, and multi-cuisine dining prepared with fresh local ingredients.
               </p>
 
               <div className="space-y-2.5 pt-1">
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
-                  <span>Daily fresh catch & regional coastal seafood</span>
+                  <span>Traditional Kerala culinary specials & multi-cuisine delicacies</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />

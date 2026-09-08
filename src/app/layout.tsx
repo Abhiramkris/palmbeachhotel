@@ -18,9 +18,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hotelpalmbeach.com"),
-  title: "Hotel Palmbeach | Luxury Tropical Sanctuary by the Sea",
+  title: "Hotel Palmbeach | Luxury Tropical Sanctuary in Palakkad",
   description:
-    "A peaceful tropical escape designed for slow mornings, beautiful evenings, and unforgettable stays. Luxury suites, multi-cuisine dining, and seaside hospitality.",
+    "A peaceful tropical escape designed for slow mornings, beautiful evenings, and unforgettable stays in Palakkad, Kerala. Luxury suites, multi-cuisine dining, and authentic hospitality.",
   icons: {
     icon: "/assets/brand/palmshore-logo.png",
   },

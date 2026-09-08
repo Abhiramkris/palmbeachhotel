@@ -29,7 +29,7 @@ export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
     id: "test-3",
     quote:
-      "Authentic coastal charm. Fresh morning air, peaceful gardens, and attentive staff who anticipate every need.",
+      "Authentic Kerala charm in Palakkad. Fresh morning air, peaceful gardens, and attentive staff who anticipate every need.",
     author: "Elena Rostova",
     location: "Geneva, Switzerland",
     stayType: "Holiday Vacation",

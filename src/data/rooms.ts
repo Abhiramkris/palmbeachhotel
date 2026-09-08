@@ -64,11 +64,11 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Private En-Suite with Hot Shower",
     airConditioned: false,
     shortDescription:
-      "Naturally ventilated courtyard-facing room with queen bed and refreshing sea breezes.",
+      "Naturally ventilated courtyard-facing room with queen bed and refreshing garden breezes.",
     fullDescription:
-      "Our Standard Non-A/C Room offers a pure coastal sanctuary. Positioned to catch the gentle evening sea breeze, this thoughtfully appointed room features a comfortable queen-size bed draped in crisp white linens, solid hardwood furnishings, an en-suite ceramic-tiled bathroom with continuous hot water, and a cozy vanity mirror and desk.",
+      "Our Standard Non-A/C Room offers a pure tranquil sanctuary in Palakkad. Positioned to catch the gentle evening breeze, this thoughtfully appointed room features a comfortable queen-size bed draped in crisp white linens, solid hardwood furnishings, an en-suite ceramic-tiled bathroom with continuous hot water, and a cozy vanity mirror and desk.",
     highlights: [
-      "Natural coastal cross-ventilation & whisper-quiet ceiling fans",
+      "Natural cross-ventilation & whisper-quiet ceiling fans",
       "Private en-suite bathroom with 24/7 hot water supply",
       "Writing desk, vanity mirror, and intercom connection",
       "Daily housekeeping & room service on call",
@@ -275,7 +275,7 @@ export const HOTEL_ROOMS: RoomType[] = [
   {
     slug: "premium-suite",
     name: "Premium Suite Room",
-    tagline: "The pinnacle of Palmbeach luxury, hospitality, and panoramic coastal outlooks",
+    tagline: "The pinnacle of Palmbeach luxury, hospitality, and panoramic Palakkad outlooks",
     rate: 3470,
     extraPersonRate: 400,
     capacity: {

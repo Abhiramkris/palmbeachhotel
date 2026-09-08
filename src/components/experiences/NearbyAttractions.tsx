@@ -15,10 +15,10 @@ export default function NearbyAttractions() {
               Destination & Surroundings
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900 leading-tight">
-              Curated Coastal Attractions
+              Curated Palakkad Attractions
             </h2>
             <p className="text-sm text-neutral-700 font-medium">
-              Explore serene shorelines, historic landmarks, and vibrant spice bazaars within minutes of Hotel Palmbeach.
+              Explore historic forts, scenic dams, and cultural heritage agraharams within minutes of Hotel Palmbeach.
             </p>
           </div>
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#1B4332]">

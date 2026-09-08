@@ -21,7 +21,7 @@ export const HOTEL_AMENITIES: Amenity[] = [
   {
     id: "restaurant",
     name: "Restaurant & Dining",
-    description: "Fresh coastal seafood and authentic multi-cuisine favorites.",
+    description: "Authentic Kerala specialties and fresh multi-cuisine favorites.",
     icon: "utensils-crossed",
   },
   {

@@ -32,7 +32,7 @@ export default function FinalCTA({ onOpenBooking }: FinalCTAProps) {
         </h2>
 
         <p className="text-base sm:text-xl text-neutral-100 font-medium max-w-xl mx-auto leading-relaxed">
-          Tranquil suites, coastal dining, and unhurried hospitality await.
+          Tranquil suites, authentic dining, and unhurried hospitality await in Palakkad.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

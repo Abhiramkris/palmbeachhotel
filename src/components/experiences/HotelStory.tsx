@@ -35,7 +35,7 @@ export default function HotelStory() {
 
             <div className="max-w-xl text-neutral-100 font-medium text-base sm:text-lg leading-relaxed pt-2">
               <p>
-                A peaceful sanctuary on the coast. Unwind among towering palms, savor fresh regional flavors, and enjoy unhurried hospitality.
+                A peaceful sanctuary in Palakkad. Unwind among towering palms, savor fresh regional flavors, and enjoy unhurried hospitality.
               </p>
             </div>
 
@@ -47,9 +47,9 @@ export default function HotelStory() {
                 </span>
               </div>
               <div>
-                <span className="block text-3xl sm:text-4xl font-editorial font-bold text-[#C5A880]">5 min</span>
+                <span className="block text-3xl sm:text-4xl font-editorial font-bold text-[#C5A880]">24/7</span>
                 <span className="text-[11px] uppercase tracking-wider text-neutral-300 mt-1 block">
-                  To Shoreline
+                  Front Desk
                 </span>
               </div>
               <div>

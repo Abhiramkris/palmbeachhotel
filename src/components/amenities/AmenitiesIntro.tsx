@@ -32,10 +32,10 @@ const EXPERIENCES: ExperienceItem[] = [
     tabTitle: "Tranquil Grounds",
     headline: "Water Fountain & Swaying Palms",
     description:
-      "Step into a calm coastal haven framed by illuminated fountain waters and lush coconut groves.",
+      "Step into a calm green haven framed by illuminated fountain waters and lush palm groves in Palakkad.",
     image: HOTEL_ASSETS.exterior.receptionFountain,
     badge: "Courtyard & Entrance",
-    perk: "Fresh Ocean Air & Greenery",
+    perk: "Fresh Greenery & Breeze",
     icon: Palmtree,
   },
   {
@@ -51,13 +51,13 @@ const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "dining",
-    tabTitle: "Coastal Dining",
+    tabTitle: "Palmshore Dining",
     headline: "The Palmshore Restaurant",
     description:
-      "Honest Kerala coastal recipes, freshly caught seafood, and comforting multi-cuisine delights.",
+      "Honest Kerala culinary recipes, aromatic spices, and comforting multi-cuisine delights.",
     image: HOTEL_ASSETS.dining.diningTables,
-    badge: "Fresh Coastal Flavors",
-    perk: "Pure Veg & Seafood Options",
+    badge: "Authentic Flavors",
+    perk: "Pure Veg & Non-Veg Specials",
     icon: UtensilsCrossed,
   },
   {
@@ -130,7 +130,7 @@ export default function AmenitiesIntro() {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-neutral-600 font-medium max-w-md">
-            Uncomplicated coastal living with pristine rooms, honest dining, and attentive 24/7 care.
+            Uncomplicated Palakkad living with pristine rooms, honest dining, and attentive 24/7 care.
           </p>
         </div>
 

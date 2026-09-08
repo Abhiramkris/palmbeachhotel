@@ -9,48 +9,48 @@ export interface Attraction {
 
 export const NEARBY_ATTRACTIONS: Attraction[] = [
   {
-    id: "waterfront",
-    name: "Palmbeach Waterfront & Shoreline",
-    distance: "5 min from the hotel",
+    id: "palakkad-fort",
+    name: "Historic Palakkad Fort (Tipu's Fort)",
+    distance: "10 min from hotel",
     description:
-      "Golden sands, rhythmic surf, and panoramic sunset horizons ideal for evening barefoot strolls.",
-    category: "Beach & Coast",
+      "Granite fortress built in the 18th century, surrounded by a serene moat and scenic green grounds.",
+    category: "Heritage & History",
     image: "/assets/exterior/hotel-exterior-day.jpeg",
   },
   {
-    id: "heritage-town",
-    name: "Historic Lighthouse & Heritage Town",
-    distance: "15 min from the hotel",
+    id: "malampuzha",
+    name: "Malampuzha Dam & Rock Gardens",
+    distance: "20 min from hotel",
     description:
-      "A storied coastal landmark with panoramic observation views of the Arabian Sea and historic quarters.",
-    category: "History & Architecture",
+      "Expansive reservoir, landscaped gardens, passenger ropeway, and lush Western Ghats mountain backdrops.",
+    category: "Nature & Leisure",
     image: "/assets/exterior/hotel-building-facade-night.jpeg",
   },
   {
-    id: "fish-market",
-    name: "Local Fish Market & Spice Bazaar",
-    distance: "10 min from the hotel",
+    id: "kalpathy",
+    name: "Kalpathy Heritage Agraharam",
+    distance: "12 min from hotel",
     description:
-      "Vibrant morning markets brimming with fresh deep-sea catch, handpicked cardamom, cloves, and local handicrafts.",
-    category: "Culture & Cuisine",
+      "Historic Vedic settlement famous for traditional temple architecture and the annual Kalpathy Ratholsavam.",
+    category: "Culture & Tradition",
     image: "/assets/dining/restaurant-dining-tables.jpeg",
   },
   {
-    id: "backwaters",
-    name: "Backwaters & Sunset Kayaking",
-    distance: "20 min from the hotel",
+    id: "kava",
+    name: "Kava Raincatcher & Viewpoint",
+    distance: "25 min from hotel",
     description:
-      "Tranquil estuaries surrounded by mangrove trails, ideal for guided canoe excursions and bird watching.",
-    category: "Nature & Eco-Tours",
+      "Known as the birthplace of rain clouds, surrounded by rolling hills, misty waters, and lush palm trails.",
+    category: "Eco-Tours & Scenic",
     image: "/assets/exterior/exterior-glass-staircase-night.jpeg",
   },
   {
-    id: "coconut-groves",
-    name: "Coastal Coconut Groves & Trails",
-    distance: "8 min from the hotel",
+    id: "silent-valley",
+    name: "Silent Valley Foothills",
+    distance: "Day excursion",
     description:
-      "Scenic shaded cycling pathways winding through centuries-old coconut plantations and traditional coastal settlements.",
-    category: "Outdoors & Leisure",
+      "Pristine rainforest biosphere reserve safeguarding rare flora, fauna, and untouched virgin greenery.",
+    category: "Wilderness & Sanctuary",
     image: "/assets/exterior/reception-entrance-fountain.jpeg",
   },
 ];
