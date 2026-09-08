@@ -214,30 +214,6 @@ export default function AmenitiesIntro() {
                 </div>
               </div>
             </div>
-
-            {/* Rotating Circular Luxury Seal positioned over the frame edge */}
-            <div className="hidden sm:flex absolute -bottom-5 -left-5 z-30 w-24 h-24 rounded-full bg-[#FAF8F5] p-1.5 shadow-xl border border-[#D5CEC2] items-center justify-center pointer-events-none">
-              <div className="relative w-full h-full flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-[#1B4332] text-[#E5D0B5] flex items-center justify-center shadow-md">
-                  <Palmtree className="w-5 h-5 stroke-[1.75]" />
-                </div>
-                <svg
-                  className="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]"
-                  viewBox="0 0 100 100"
-                >
-                  <path
-                    id="sealPath"
-                    d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
-                    fill="none"
-                  />
-                  <text className="text-[7.5px] uppercase tracking-[0.26em] fill-[#1B4332] font-bold">
-                    <textPath href="#sealPath" startOffset="0%">
-                      ★ PALMBEACH • TRIVANDRUM •
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Interactive Selectors & Story */}
