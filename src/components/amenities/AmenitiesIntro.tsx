@@ -1,71 +1,330 @@
 "use client";
 
-import { ArrowRight, Palmtree, Waves, Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import {
+  ArrowRight,
+  Palmtree,
+  Sparkles,
+  Bed,
+  UtensilsCrossed,
+  ShieldCheck,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { HOTEL_ASSETS } from "@/lib/assets";
+
+interface ExperienceItem {
+  id: string;
+  tabTitle: string;
+  headline: string;
+  description: string;
+  image: string;
+  badge: string;
+  perk: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const EXPERIENCES: ExperienceItem[] = [
+  {
+    id: "grounds",
+    tabTitle: "Tranquil Grounds",
+    headline: "Water Fountain & Swaying Palms",
+    description:
+      "Step into a calm coastal haven framed by illuminated fountain waters and lush coconut groves.",
+    image: HOTEL_ASSETS.exterior.receptionFountain,
+    badge: "Courtyard & Entrance",
+    perk: "Fresh Ocean Air & Greenery",
+    icon: Palmtree,
+  },
+  {
+    id: "suites",
+    tabTitle: "Restful Suites",
+    headline: "Five Transparent Room Tiers",
+    description:
+      "Crisp linens, silent climate control, and orthopedic beds designed for deep, restorative sleep.",
+    image: HOTEL_ASSETS.rooms.deluxeBed,
+    badge: "Tariffs from ₹1,870",
+    perk: "Orthopedic Sleep Comfort",
+    icon: Bed,
+  },
+  {
+    id: "dining",
+    tabTitle: "Coastal Dining",
+    headline: "The Palmshore Restaurant",
+    description:
+      "Honest Kerala coastal recipes, freshly caught seafood, and comforting multi-cuisine delights.",
+    image: HOTEL_ASSETS.dining.diningTables,
+    badge: "Fresh Coastal Flavors",
+    perk: "Pure Veg & Seafood Options",
+    icon: UtensilsCrossed,
+  },
+  {
+    id: "hospitality",
+    tabTitle: "24/7 Care",
+    headline: "Round-the-Clock Front Desk",
+    description:
+      "Zero hidden fees, transparent desk tariffs, and heartfelt personal assistance whenever needed.",
+    image: HOTEL_ASSETS.interior.lobbyLounge,
+    badge: "Direct Desk Rates",
+    perk: "Attentive Personal Care",
+    icon: ShieldCheck,
+  },
+];
 
 export default function AmenitiesIntro() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-cycle through experiences every 6 seconds if not paused
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % EXPERIENCES.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const activeExp = EXPERIENCES[activeIndex];
+
+  const handleNext = () => {
+    setIsAutoPlaying(false);
+    setActiveIndex((prev) => (prev + 1) % EXPERIENCES.length);
+  };
+
+  const handlePrev = () => {
+    setIsAutoPlaying(false);
+    setActiveIndex((prev) => (prev - 1 + EXPERIENCES.length) % EXPERIENCES.length);
+  };
+
+  const handleSelect = (idx: number) => {
+    setIsAutoPlaying(false);
+    setActiveIndex(idx);
+  };
+
+  const scrollToBooking = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("hero-booking-form");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        const input = el.querySelector<HTMLInputElement>("input[name='name'], input[type='text']");
+        input?.focus({ preventScroll: true });
+      }, 400);
+    }
+  };
+
   return (
     <section id="amenities" className="py-20 lg:py-28 bg-[#FAF8F5] border-b border-[#EAE6DF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left: Large circular emblem */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="relative group">
-              {/* Outer decorative ring */}
-              <div className="w-56 h-56 sm:w-72 sm:h-72 rounded-full border border-[#D5CEC2] flex items-center justify-center p-4 transition-transform duration-700 group-hover:scale-105">
-                {/* Inner background circle */}
-                <div className="w-full h-full rounded-full bg-[#EDE7DD] flex flex-col items-center justify-center p-6 text-center shadow-inner relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#1B4332]/5 to-transparent pointer-events-none" />
-                  
-                  {/* Subtle rotating circular border dots */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#1B4332] text-white flex items-center justify-center shadow-lg mb-3">
-                    <Palmtree className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.5]" />
-                  </div>
-                  
-                  <span className="text-[10px] tracking-[0.3em] uppercase font-semibold text-[#1B4332]">
-                    Est. Coastal Haven
-                  </span>
-                  <span className="text-xs sm:text-sm font-editorial text-neutral-700 italic mt-0.5">
-                    Tranquil Sanctuary
-                  </span>
-                  
-                  <div className="flex items-center gap-1 mt-2 text-[#C5A880]">
-                    <Sparkles className="w-3 h-3" />
-                    <span className="text-[10px] uppercase tracking-widest font-medium">Bespoke Stays</span>
-                    <Sparkles className="w-3 h-3" />
-                  </div>
+        {/* Section Pre-header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div className="space-y-2">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#B89258] font-bold">
+              Boutique Amenities & Atmosphere
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-[#111E18] tracking-tight">
+              Everything You Need.{" "}
+              <span className="italic font-bold text-[#1B4332]">Nothing You Don&apos;t.</span>
+            </h2>
+          </div>
+          <p className="text-sm sm:text-base text-neutral-600 font-medium max-w-md">
+            Uncomplicated coastal living with pristine rooms, honest dining, and attentive 24/7 care.
+          </p>
+        </div>
+
+        {/* Interactive Experience Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Dynamic Visual Showcase Stage */}
+          <div
+            className="lg:col-span-7 relative"
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
+          >
+            {/* Main Stage Frame */}
+            <div className="relative h-[380px] sm:h-[460px] lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-[#E5DFD5] bg-neutral-900 group">
+              {/* Image with smooth fade on change */}
+              {EXPERIENCES.map((exp, idx) => (
+                <div
+                  key={exp.id}
+                  className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                    idx === activeIndex ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-105 pointer-events-none"
+                  }`}
+                >
+                  <Image
+                    src={exp.image}
+                    alt={exp.headline}
+                    fill
+                    className="object-cover brightness-90 transition-transform duration-1000 ease-out group-hover:scale-105"
+                    priority={idx === 0}
+                  />
+                  {/* Subtle darkening gradient for badge contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/30" />
+                </div>
+              ))}
+
+              {/* Floating Top-Left Category Pill */}
+              <div className="absolute top-5 left-5 z-20">
+                <div className="bg-[#0D1E16]/85 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-white text-xs font-semibold tracking-wider uppercase shadow-lg flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#E5D0B5]" />
+                  <span>{activeExp.badge}</span>
                 </div>
               </div>
 
-              {/* Floating subtle accent badge */}
-              <div className="absolute -bottom-3 -right-3 bg-white border border-[#E0D9CD] px-4 py-2 rounded-full shadow-md text-[11px] font-medium text-neutral-800 flex items-center gap-2">
-                <Waves className="w-3.5 h-3.5 text-emerald-800" />
-                <span>By the Coastline</span>
+              {/* Floating Top-Right Pagination Controls */}
+              <div className="absolute top-5 right-5 z-20 flex items-center gap-2">
+                <button
+                  onClick={handlePrev}
+                  aria-label="Previous experience"
+                  className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/80 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition cursor-pointer"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  aria-label="Next experience"
+                  className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/80 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition cursor-pointer"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Bottom Overlay Info inside the Frame */}
+              <div className="absolute bottom-6 left-6 right-6 z-20 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div className="max-w-md space-y-1.5">
+                  <span className="text-[11px] uppercase tracking-widest text-[#E5D0B5] font-bold">
+                    Experience {activeIndex + 1} of {EXPERIENCES.length}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold font-editorial text-white leading-snug">
+                    {activeExp.headline}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-200 font-medium line-clamp-2">
+                    {activeExp.description}
+                  </p>
+                </div>
+
+                {/* Live Feature Tag */}
+                <div className="shrink-0 bg-white/95 backdrop-blur-md border border-white/60 px-4 py-2 rounded-2xl text-neutral-900 text-xs font-bold shadow-xl flex items-center gap-2 self-start sm:self-auto">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
+                  </span>
+                  <span>{activeExp.perk}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Rotating Circular Luxury Seal positioned over the frame edge */}
+            <div className="hidden sm:flex absolute -bottom-5 -left-5 z-30 w-24 h-24 rounded-full bg-[#FAF8F5] p-1.5 shadow-xl border border-[#D5CEC2] items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#1B4332] text-[#E5D0B5] flex items-center justify-center shadow-md">
+                  <Palmtree className="w-5 h-5 stroke-[1.75]" />
+                </div>
+                <svg
+                  className="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]"
+                  viewBox="0 0 100 100"
+                >
+                  <path
+                    id="sealPath"
+                    d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
+                    fill="none"
+                  />
+                  <text className="text-[7.5px] uppercase tracking-[0.26em] fill-[#1B4332] font-bold">
+                    <textPath href="#sealPath" startOffset="0%">
+                      ★ PALMBEACH • TRIVANDRUM •
+                    </textPath>
+                  </text>
+                </svg>
               </div>
             </div>
           </div>
 
-          {/* Right: Editorial Typography */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#B89258] font-bold">
-              <span>Boutique Amenities & Hospitality</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-editorial text-[#111E18] leading-[1.12]">
-              Everything You Need. <br className="hidden sm:inline" />
-              <span className="italic font-bold text-[#1B4332]">Nothing You Don&apos;t.</span>
-            </h2>
-
-            <p className="text-base sm:text-lg text-neutral-700 font-medium leading-relaxed max-w-xl">
-              Restful rooms, fresh ocean air, authentic coastal dining, and attentive 24/7 personal care.
+          {/* Right Column: Interactive Selectors & Story */}
+          <div className="lg:col-span-5 space-y-4">
+            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+              Tap to explore resort features:
             </p>
 
-            <div className="pt-2">
-              <a
-                href="#amenities-grid"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-[#1B4332] hover:text-emerald-700 transition group"
+            {/* 4 Interactive Selector Cards */}
+            <div className="space-y-3">
+              {EXPERIENCES.map((exp, idx) => {
+                const IconComponent = exp.icon;
+                const isActive = idx === activeIndex;
+                return (
+                  <button
+                    key={exp.id}
+                    onClick={() => handleSelect(idx)}
+                    className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-start gap-4 cursor-pointer relative overflow-hidden group ${
+                      isActive
+                        ? "bg-white border-[#1B4332] shadow-md ring-1 ring-[#1B4332]/20"
+                        : "bg-white/60 hover:bg-white border-[#E7E2DA] hover:border-[#D0C7B8] shadow-xs"
+                    }`}
+                  >
+                    {/* Active timer/progress indicator line */}
+                    {isActive && (
+                      <span className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#1B4332] rounded-l" />
+                    )}
+
+                    {/* Icon Pill */}
+                    <div
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                        isActive
+                          ? "bg-[#1B4332] text-white shadow-sm"
+                          : "bg-[#F3EFE8] text-neutral-700 group-hover:bg-[#EDE6DA]"
+                      }`}
+                    >
+                      <IconComponent className="w-5 h-5" />
+                    </div>
+
+                    {/* Text */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <h4
+                          className={`text-sm font-bold transition-colors ${
+                            isActive ? "text-[#1B4332]" : "text-neutral-900 group-hover:text-black"
+                          }`}
+                        >
+                          {exp.tabTitle}
+                        </h4>
+                        <span className="text-[10px] uppercase font-mono text-neutral-400 font-medium">
+                          0{idx + 1}
+                        </span>
+                      </div>
+                      <p className="text-xs text-neutral-600 font-normal leading-relaxed line-clamp-1 mt-0.5">
+                        {exp.headline}
+                      </p>
+                    </div>
+
+                    {/* Indicator Arrow */}
+                    <ArrowRight
+                      className={`w-4 h-4 shrink-0 transition-transform ${
+                        isActive
+                          ? "text-[#1B4332] translate-x-0.5"
+                          : "text-neutral-300 group-hover:text-neutral-500 group-hover:translate-x-0.5"
+                      }`}
+                    />
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Direct CTAs */}
+            <div className="pt-3 flex flex-col sm:flex-row items-center gap-3">
+              <button
+                onClick={scrollToBooking}
+                className="w-full sm:w-auto px-6 py-3 bg-[#E05332] hover:bg-[#C94324] text-white text-xs uppercase tracking-widest font-bold rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Explore Amenities</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
+                <Calendar className="w-4 h-4" />
+                <span>Book Your Stay</span>
+              </button>
+
+              <a
+                href="#rooms"
+                className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-neutral-50 border border-[#D5CEC2] text-neutral-800 text-xs uppercase tracking-widest font-bold rounded-xl transition flex items-center justify-center gap-2"
+              >
+                <span>View All 5 Rooms</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#1B4332]" />
               </a>
             </div>
           </div>
