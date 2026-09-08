@@ -11,10 +11,28 @@ interface FloatingBookingFormProps {
     phone: string;
     email: string;
   }) => void;
+  selectedSlug?: string;
+  onSlugChange?: (slug: string) => void;
+  isHighlighted?: boolean;
 }
 
-export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBookingFormProps) {
-  const [selectedSlug, setSelectedSlug] = useState(ALL_BOOKING_TYPES[0].slug);
+export default function FloatingBookingForm({
+  onSubmitInquiry,
+  selectedSlug: controlledSlug,
+  onSlugChange,
+  isHighlighted = false,
+}: FloatingBookingFormProps) {
+  const [internalSlug, setInternalSlug] = useState(ALL_BOOKING_TYPES[0].slug);
+  const selectedSlug = controlledSlug !== undefined ? controlledSlug : internalSlug;
+
+  const handleSlugChange = (newSlug: string) => {
+    if (onSlugChange) {
+      onSlugChange(newSlug);
+    } else {
+      setInternalSlug(newSlug);
+    }
+  };
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -30,7 +48,14 @@ export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBooking
   };
 
   return (
-    <div className="w-full max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 shadow-2xl border border-white/60 text-[#1C1E1B] transition-all duration-300">
+    <div
+      id="hero-booking-form"
+      className={`w-full max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 shadow-2xl border transition-all duration-500 text-[#1C1E1B] scroll-mt-24 sm:scroll-mt-32 ${
+        isHighlighted
+          ? "ring-4 ring-[#E05332] ring-offset-4 ring-offset-black/50 scale-[1.02] shadow-[0_0_50px_rgba(224,83,50,0.4)]"
+          : "border-white/60"
+      }`}
+    >
       <div className="space-y-1 mb-5">
         <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-[10px] font-semibold tracking-wider uppercase text-emerald-900">
           <PhoneCall className="w-3 h-3 text-[#1B4332]" />
@@ -54,7 +79,7 @@ export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBooking
           <div className="relative">
             <select
               value={selectedSlug}
-              onChange={(e) => setSelectedSlug(e.target.value)}
+              onChange={(e) => handleSlugChange(e.target.value)}
               className="w-full appearance-none bg-neutral-50/90 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-neutral-800 focus:outline-[#1B4332] focus:bg-white transition cursor-pointer pr-8"
             >
               <optgroup label="Rooms & Suites">

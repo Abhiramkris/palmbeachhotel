@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
@@ -32,6 +32,35 @@ export default function Home() {
     roomSlug: HOTEL_ROOMS[0].slug,
   });
 
+  const [heroFormSlug, setHeroFormSlug] = useState<string>(HOTEL_ROOMS[0].slug);
+  const [isFormHighlighted, setIsFormHighlighted] = useState(false);
+
+  const scrollToHeroForm = (slug?: string) => {
+    if (slug) {
+      setHeroFormSlug(slug);
+    }
+    const el = document.getElementById("hero-booking-form");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      setIsFormHighlighted(true);
+      setTimeout(() => {
+        setIsFormHighlighted(false);
+      }, 2000);
+      setTimeout(() => {
+        const input = el.querySelector<HTMLInputElement>("input[name='name'], input[type='text']");
+        input?.focus({ preventScroll: true });
+      }, 400);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#hero-booking-form") {
+      setTimeout(() => {
+        scrollToHeroForm();
+      }, 300);
+    }
+  }, []);
+
   const [activeGalleryFilter, setActiveGalleryFilter] = useState<string>("all");
 
   const handleHeroInquiry = (params: {
@@ -51,14 +80,7 @@ export default function Home() {
   };
 
   const handleOpenBooking = (slug?: string) => {
-    setBookingParams({
-      roomSlug: slug || HOTEL_ROOMS[0].slug,
-      name: "",
-      phone: "",
-      email: "",
-      isConfirmed: false,
-    });
-    setBookingModalOpen(true);
+    scrollToHeroForm(slug);
   };
 
   const galleryCategories = [
@@ -136,7 +158,12 @@ export default function Home() {
 
               {/* Right Column: Floating Booking Form (Inspired by reference search card) */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <FloatingBookingForm onSubmitInquiry={handleHeroInquiry} />
+                <FloatingBookingForm
+                  onSubmitInquiry={handleHeroInquiry}
+                  selectedSlug={heroFormSlug}
+                  onSlugChange={setHeroFormSlug}
+                  isHighlighted={isFormHighlighted}
+                />
               </div>
             </div>
           </div>

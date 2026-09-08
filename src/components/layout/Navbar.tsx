@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 interface NavbarProps {
@@ -12,6 +13,29 @@ interface NavbarProps {
 export default function Navbar({ onOpenBooking }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleBookYourStay = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onOpenBooking) {
+      onOpenBooking();
+      return;
+    }
+
+    if (pathname === "/") {
+      const el = document.getElementById("hero-booking-form");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => {
+          const input = el.querySelector<HTMLInputElement | HTMLSelectElement>("input[name='name'], input, select");
+          input?.focus({ preventScroll: true });
+        }, 400);
+      }
+    } else {
+      router.push("/#hero-booking-form");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +106,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         {/* Right Action */}
         <div className="hidden lg:flex items-center gap-4">
           <button
-            onClick={onOpenBooking}
+            onClick={handleBookYourStay}
             className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm cursor-pointer ${
               isScrolled
                 ? "bg-[#1B4332] text-white hover:bg-emerald-950 hover:shadow-md"
@@ -123,9 +147,9 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           </div>
           <div className="pt-4 border-t border-[#E8E4DD]">
             <button
-              onClick={() => {
+              onClick={(e) => {
                 setMobileMenuOpen(false);
-                onOpenBooking?.();
+                handleBookYourStay(e);
               }}
               className="w-full py-3 bg-[#1B4332] hover:bg-emerald-950 text-white text-xs uppercase tracking-widest font-semibold rounded-full text-center shadow-sm cursor-pointer"
             >
