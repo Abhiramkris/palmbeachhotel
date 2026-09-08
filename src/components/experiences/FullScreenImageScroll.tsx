@@ -59,22 +59,22 @@ export default function FullScreenImageScroll() {
             src={HOTEL_ASSETS.exterior.buildingNightWide}
             alt="Hotel Palmbeach evening illuminated grounds"
             fill
-            className="object-cover brightness-85"
+            className="object-cover brightness-105"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
           {/* Editorial Caption Overlay */}
           <div className="absolute bottom-8 sm:bottom-12 left-6 sm:left-12 right-6 sm:right-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white z-10">
-            <div className="max-w-xl space-y-2">
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+            <div className="max-w-xl space-y-2 drop-shadow-md">
+              <span className="text-[11px] uppercase tracking-[0.25em] text-[#E5D0B5] font-semibold">
                 Twilight Over the Palms
               </span>
               <h4 className="text-2xl sm:text-3xl font-light font-editorial leading-snug">
                 Quiet paths and illuminated palm groves at dusk.
               </h4>
             </div>
-            <div className="text-xs font-mono text-white/70">
+            <div className="text-xs font-mono text-white/90 drop-shadow-md">
               08°30&apos;N · Coastal Latitude
             </div>
           </div>

@@ -156,11 +156,11 @@ export default function AmenitiesIntro() {
                     src={exp.image}
                     alt={exp.headline}
                     fill
-                    className="object-cover brightness-90 transition-transform duration-1000 ease-out group-hover:scale-105"
+                    className="object-cover brightness-95 transition-transform duration-1000 ease-out group-hover:scale-105"
                     priority={idx === 0}
                   />
-                  {/* Subtle darkening gradient for badge contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/30" />
+                  {/* Subtle darkening gradient for text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
                 </div>
               ))}
 
@@ -191,8 +191,8 @@ export default function AmenitiesIntro() {
               </div>
 
               {/* Bottom Overlay Info inside the Frame */}
-              <div className="absolute bottom-6 left-6 right-6 z-20 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div className="max-w-md space-y-1.5">
+              <div className="absolute bottom-6 left-6 right-6 z-20 text-white">
+                <div className="max-w-lg space-y-1.5 drop-shadow-md">
                   <span className="text-[11px] uppercase tracking-widest text-[#E5D0B5] font-bold">
                     Experience {activeIndex + 1} of {EXPERIENCES.length}
                   </span>
@@ -202,15 +202,6 @@ export default function AmenitiesIntro() {
                   <p className="text-xs sm:text-sm text-neutral-200 font-medium line-clamp-2">
                     {activeExp.description}
                   </p>
-                </div>
-
-                {/* Live Feature Tag */}
-                <div className="shrink-0 bg-white/95 backdrop-blur-md border border-white/60 px-4 py-2 rounded-2xl text-neutral-900 text-xs font-bold shadow-xl flex items-center gap-2 self-start sm:self-auto">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
-                  </span>
-                  <span>{activeExp.perk}</span>
                 </div>
               </div>
             </div>
