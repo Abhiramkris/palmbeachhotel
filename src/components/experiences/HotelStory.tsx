@@ -33,12 +33,9 @@ export default function HotelStory() {
               </h2>
             </div>
 
-            <div className="space-y-4 max-w-xl text-neutral-100 font-medium text-base sm:text-lg leading-relaxed pt-2">
+            <div className="max-w-xl text-neutral-100 font-medium text-base sm:text-lg leading-relaxed pt-2">
               <p>
-                Nestled along a tranquil coastal corridor, Hotel Palmbeach was conceived as an antidote to hurried modern life. From the gentle rustle of towering coconut palms at daybreak to the warm reflection of evening lanterns upon the fountain courtyard, time slows to the rhythm of the tides.
-              </p>
-              <p className="text-sm text-neutral-200 font-normal">
-                Whether sharing conversations over authentic local coastal cuisine, resting in quiet air-conditioned suites, or stepping out to secluded shorelines, every moment is an invitation to unwind.
+                A peaceful sanctuary on the coast. Unwind among towering palms, savor fresh regional flavors, and enjoy unhurried hospitality.
               </p>
             </div>
 
@@ -79,7 +76,7 @@ export default function HotelStory() {
                   Arrival Court
                 </span>
                 <p className="font-light text-neutral-200">
-                  Illuminated fountain reception & tropical arrival driveway
+                  Illuminated fountain reception & entrance
                 </p>
               </div>
             </div>

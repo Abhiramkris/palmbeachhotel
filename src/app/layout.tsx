@@ -1,23 +1,18 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   variable: "--font-editorial",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -39,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${cormorant.variable} ${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#FAF8F5] text-[#1C1E1B] selection:bg-emerald-800 selection:text-white`}
+        className={`${playfair.variable} ${montserrat.variable} antialiased min-h-screen bg-[#FAF8F5] text-[#1C1E1B] font-sans selection:bg-emerald-800 selection:text-white`}
       >
         {children}
       </body>

@@ -11,7 +11,7 @@ export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
     id: "test-1",
     quote:
-      "The perfect place to slow down. Beautiful rooms, warm hospitality, and sunsets we simply didn’t want to leave behind. The palm courtyard is pure magic at dusk.",
+      "The perfect place to slow down. Beautiful rooms, warm hospitality, and pure magic at dusk.",
     author: "Ananya & Raghavan S.",
     location: "Bangalore, India",
     stayType: "Suite Room Stay",
@@ -20,16 +20,16 @@ export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
     id: "test-2",
     quote:
-      "We hosted our company’s annual retreat here. The banquet hall facilities, stage, and audio setup were flawless, and the coastal dining buffet was praised by all 80 delegates.",
+      "Flawless banquet hall facilities and audio setup for our 80 conference delegates. Exceptional food.",
     author: "Capt. Vikram Deshmukh",
     location: "Mumbai, India",
-    stayType: "Corporate Conference & Executive Stay",
+    stayType: "Corporate Retreat",
     rating: 5,
   },
   {
     id: "test-3",
     quote:
-      "Authentic coastal charm without pretension. Waking up to garden birds, sipping fresh coconut water, and having attentive staff remember our breakfast preferences made it truly exceptional.",
+      "Authentic coastal charm. Fresh morning air, peaceful gardens, and attentive staff who anticipate every need.",
     author: "Elena Rostova",
     location: "Geneva, Switzerland",
     stayType: "Holiday Vacation",
@@ -38,10 +38,10 @@ export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
     id: "test-4",
     quote:
-      "Immaculately clean rooms, modern bathrooms with great water pressure, and peaceful evenings walking along the fountain courtyard. Hotel Palmbeach exceeded all our expectations.",
+      "Immaculately clean rooms, wonderful fountain courtyard, and great food. Exceeded all expectations.",
     author: "Prashanth Nair",
     location: "Cochin, Kerala",
-    stayType: "Deluxe King Room",
+    stayType: "Executive King Room",
     rating: 5,
   },
 ];

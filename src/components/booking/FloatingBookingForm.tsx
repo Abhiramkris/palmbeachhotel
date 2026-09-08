@@ -40,7 +40,7 @@ export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBooking
           Book Your Stay Directly
         </h3>
         <p className="text-xs text-neutral-500 font-light">
-          Submit details below — our front desk will call you to confirm
+          Front desk will call to confirm
         </p>
       </div>
 
@@ -126,12 +126,10 @@ export default function FloatingBookingForm({ onSubmitInquiry }: FloatingBooking
           />
         </div>
 
-        {/* Confirmation Call Promise */}
-        <div className="bg-[#FAF6F0] p-3 rounded-xl border border-[#EAE2D5] flex items-start gap-2.5 text-[11px] text-neutral-700 leading-snug">
-          <PhoneCall className="w-4 h-4 text-[#1B4332] shrink-0 mt-0.5" />
-          <span>
-            <strong className="text-[#1B4332] font-semibold">Confirmation Call:</strong> There will be a confirmation call from our end to finalize dates and booking.
-          </span>
+        {/* Confirmation Call Notice */}
+        <div className="bg-[#FAF6F0] p-2.5 rounded-xl border border-[#EAE2D5] flex items-center gap-2 text-[11px] text-neutral-700">
+          <PhoneCall className="w-3.5 h-3.5 text-[#1B4332] shrink-0" />
+          <span>Our desk will call to confirm your dates & booking.</span>
         </div>
 
         {/* Submit Button */}

@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-neutral-400 font-light leading-relaxed max-w-sm">
-              Hotel Palmbeach is a luxury boutique sanctuary where serene palm groves embrace the sea. Created for slow mornings, thoughtful hospitality, and timeless coastal memories.
+              A tranquil coastal sanctuary in Trivandrum offering boutique rooms, conference banquets, and authentic dining.
             </p>
             <div className="pt-2">
               <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">

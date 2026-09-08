@@ -106,7 +106,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base sm:text-xl text-neutral-100 font-medium leading-relaxed max-w-xl drop-shadow-md">
-                  A peaceful tropical escape designed for slow mornings, beautiful evenings, and unforgettable stays.
+                  Tranquil coastal resort in Trivandrum with verified tariffs and heartfelt hospitality.
                 </p>
 
                 {/* CTAs */}
@@ -126,22 +126,11 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* Subtle trust signal with bold contrast */}
-                <div className="pt-4 flex items-center gap-6 text-xs text-neutral-200 font-medium border-t border-white/20 max-w-md">
-                  <div>
-                    <span className="font-bold text-white block">Official Tariff</span>
-                    <span className="text-neutral-300">Direct Desk Rates</span>
-                  </div>
-                  <div className="h-6 w-[1px] bg-white/30" />
-                  <div>
-                    <span className="font-bold text-white block">24/7 Front Desk</span>
-                    <span className="text-neutral-300">Personal Concierge</span>
-                  </div>
-                  <div className="h-6 w-[1px] bg-white/30" />
-                  <div>
-                    <span className="font-bold text-white block">Coastal Cuisine</span>
-                    <span className="text-neutral-300">Fresh & Authentic</span>
-                  </div>
+                {/* Direct Trust Badges */}
+                <div className="pt-3 flex flex-wrap items-center gap-3 text-xs text-neutral-200 font-medium">
+                  <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Direct Desk Rates</span>
+                  <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">24/7 Reception</span>
+                  <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs">Fresh Coastal Dining</span>
                 </div>
               </div>
 
@@ -174,7 +163,7 @@ export default function Home() {
                   Find Your Perfect Stay.
                 </h2>
                 <p className="text-base text-neutral-700 font-medium leading-relaxed">
-                  Immerse yourself in understated luxury. From naturally ventilated coastal havens to grand presidential suites, every room is tailored for serenity and restorative rest.
+                  Five transparent room categories designed for restorative coastal rest.
                 </p>
               </div>
 
@@ -216,7 +205,7 @@ export default function Home() {
                 Moments at Hotel Palmbeach
               </h2>
               <p className="text-sm sm:text-base text-neutral-700 font-medium">
-                Glimpses of tranquil suites, culinary flavors, event venues, and sunlit courtyards.
+                A visual tour of our suites, dining, and tranquil grounds.
               </p>
 
               {/* Filter Pills */}

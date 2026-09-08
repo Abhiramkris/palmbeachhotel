@@ -3,50 +3,43 @@ export interface Amenity {
   name: string;
   description: string;
   icon: string;
-  detail: string;
 }
 
 export const HOTEL_AMENITIES: Amenity[] = [
   {
     id: "pool",
     name: "Swimming Pool",
-    description: "Sun-dappled outdoor swimming pool framed by swaying coastal palms.",
+    description: "Outdoor pool surrounded by palm gardens and sun loungers.",
     icon: "waves",
-    detail: "Relax on cushioned sun loungers with towel service and tropical refreshments.",
   },
   {
     id: "wifi",
-    name: "Free Wi-Fi",
-    description: "High-speed optical fiber wireless internet across all rooms and public lounges.",
+    name: "Free High-Speed Wi-Fi",
+    description: "Fast fiber internet across all rooms and public spaces.",
     icon: "wifi",
-    detail: "Seamless connectivity for streaming, work calls, and uninterrupted leisure.",
   },
   {
     id: "restaurant",
     name: "Restaurant & Dining",
-    description: "Signature in-house dining hall preparing coastal delicacies & multi-cuisine feasts.",
+    description: "Fresh coastal seafood and authentic multi-cuisine favorites.",
     icon: "utensils-crossed",
-    detail: "Fresh daily catch, authentic local spices, and delightful vegetarian spreads.",
   },
   {
     id: "room-service",
-    name: "Room Service",
-    description: "Prompt culinary in-room dining delivered fresh to your suite at any hour.",
+    name: "24/7 Room Service",
+    description: "In-room dining delivered fresh to your suite at any hour.",
     icon: "concierge-bell",
-    detail: "From morning specialty coffee to late-night suppers served with warm care.",
   },
   {
     id: "airport-transfer",
-    name: "Airport Transfer",
-    description: "Convenient chauffeur-driven pickup and drop assistance for effortless travel.",
+    name: "Airport Transfers",
+    description: "Chauffeur pickup and drop arranged upon request.",
     icon: "car",
-    detail: "Comfortable air-conditioned vehicles arranged upon request for stress-free transit.",
   },
   {
     id: "guest-service",
-    name: "24/7 Guest Service",
-    description: "Round-the-clock front desk, concierge assistance, and luggage handling.",
+    name: "24/7 Front Desk",
+    description: "Round-the-clock check-in, concierge, and luggage handling.",
     icon: "clock",
-    detail: "Attentive hospitality team on standby day and night to fulfill every request.",
   },
 ];

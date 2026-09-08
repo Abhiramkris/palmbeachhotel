@@ -49,11 +49,8 @@ export default function AmenitiesGrid() {
                 <h4 className="text-xl font-bold font-editorial text-neutral-900 mb-2.5 transition-transform duration-300 group-hover:translate-x-1">
                   {amenity.name}
                 </h4>
-                <p className="text-sm text-neutral-700 font-normal leading-relaxed mb-4 transition-colors duration-300 group-hover:text-neutral-900">
+                <p className="text-sm text-neutral-700 font-normal leading-relaxed transition-colors duration-300 group-hover:text-neutral-900">
                   {amenity.description}
-                </p>
-                <p className="text-xs text-neutral-600 font-semibold italic font-serif">
-                  {amenity.detail}
                 </p>
               </div>
 

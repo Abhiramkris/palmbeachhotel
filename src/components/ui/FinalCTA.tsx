@@ -32,7 +32,7 @@ export default function FinalCTA({ onOpenBooking }: FinalCTAProps) {
         </h2>
 
         <p className="text-base sm:text-xl text-neutral-100 font-medium max-w-xl mx-auto leading-relaxed">
-          Make your next stay something worth remembering. Unhurried mornings, tranquil gardens, and ocean whispers await.
+          Tranquil suites, coastal dining, and unhurried hospitality await.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

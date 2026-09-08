@@ -68,55 +68,55 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
               </h2>
 
               <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
-                Whether orchestrating wedding celebrations, anniversary galas, business seminars, or corporate conferences, our pillar-free banquet hall provides an expansive, climate-controlled setting tailored for memorable gatherings.
+                Pillar-free, climate-controlled venue for weddings, corporate seminars, and grand family celebrations.
               </p>
 
               {/* Feature points */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
-                    <Mic className="w-5 h-5" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+                <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
+                    <Mic className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-neutral-900">Custom Staging & Podium</h4>
-                    <p className="text-xs text-neutral-600 mt-1">
-                      Raised dais, speaker podium & integrated sound system.
+                    <h4 className="font-bold text-sm text-neutral-900">Staging & Podium</h4>
+                    <p className="text-xs text-neutral-600 mt-0.5">
+                      Raised dais, podium & sound system.
                     </p>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
-                    <Users className="w-5 h-5" />
+                <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
+                    <Users className="w-4 h-4" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-neutral-900">250+ Capacity</h4>
-                    <p className="text-xs text-neutral-600 mt-1">
-                      Flexible theatre, classroom, or round-table banquet setups.
+                    <p className="text-xs text-neutral-600 mt-0.5">
+                      Flexible theatre or banquet seating.
                     </p>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5" />
+                <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-neutral-900">Event Coordination</h4>
-                    <p className="text-xs text-neutral-600 mt-1">
-                      Dedicated staff assisting with logistics, decor & lighting.
+                    <p className="text-xs text-neutral-600 mt-0.5">
+                      Full logistics and decor assistance.
                     </p>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
-                    <Utensils className="w-5 h-5" />
+                <div className="p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center shrink-0">
+                    <Utensils className="w-4 h-4" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-neutral-900">Banquet Catering</h4>
-                    <p className="text-xs text-neutral-600 mt-1">
-                      Custom multi-course buffets & celebratory spreads.
+                    <p className="text-xs text-neutral-600 mt-0.5">
+                      Multi-course celebration menus.
                     </p>
                   </div>
                 </div>
@@ -152,25 +152,25 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
               </h2>
 
               <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
-                Experience authentic regional gastronomy and multi-cuisine delights. From the freshest local coastal catch cooked with aromatic ground spices to wholesome South Indian breakfasts and rich North Indian curries, every meal is prepared with culinary passion.
+                Authentic coastal catch, Kerala specialties, and multi-cuisine dining prepared with fresh local ingredients.
               </p>
 
-              <div className="space-y-3 pt-2">
+              <div className="space-y-2.5 pt-1">
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-[#1B4332] shrink-0" />
-                  <span>Fresh daily coastal catches, tiger prawns & regional fish curries</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
+                  <span>Daily fresh catch & regional coastal seafood</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-[#1B4332] shrink-0" />
-                  <span>Morning breakfast buffet spreads with filter coffee & fresh juices</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
+                  <span>Breakfast buffet with filter coffee & fresh juices</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-[#1B4332] shrink-0" />
-                  <span>Attentive indoor table service & comfortable family dining booths</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
+                  <span>Indoor family dining hall & private booths</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-[#1B4332] shrink-0" />
-                  <span>Prompt 24/7 room service delivered straight to your suite</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
+                  <span>24-hour in-room dining delivered to your suite</span>
                 </div>
               </div>
 

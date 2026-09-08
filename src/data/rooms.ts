@@ -64,7 +64,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Private En-Suite with Hot Shower",
     airConditioned: false,
     shortDescription:
-      "A serene, budget-friendly retreat designed for mindful travelers, featuring expansive garden-facing windows, ceiling fans, and refreshing sea breezes.",
+      "Naturally ventilated courtyard-facing room with queen bed and refreshing sea breezes.",
     fullDescription:
       "Our Standard Non-A/C Room offers a pure coastal sanctuary. Positioned to catch the gentle evening sea breeze, this thoughtfully appointed room features a comfortable queen-size bed draped in crisp white linens, solid hardwood furnishings, an en-suite ceramic-tiled bathroom with continuous hot water, and a cozy vanity mirror and desk.",
     highlights: [
@@ -119,7 +119,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Glass Shower Cubicle & Modern Vanity",
     airConditioned: true,
     shortDescription:
-      "Fully climate-controlled sanctuary with a plush king bed, mood reading lighting, and calming garden outlooks for restful coastal afternoons.",
+      "Climate-controlled comfort with plush king bed, rain shower, and calming garden views.",
     fullDescription:
       "The Standard A/C Room combines crisp modern climate control with tropical warmth. Relax on a generous king-size bed fitted with premium mattress toppers and accent pillows. Complete with a flat-screen television, complimentary high-speed Wi-Fi, and a contemporary bathroom with rain shower, it delivers effortless comfort after a sunny day exploring the coast.",
     highlights: [
@@ -174,7 +174,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Designer Walk-in Rain Shower & Bath Amenities",
     airConditioned: true,
     shortDescription:
-      "Generously proportioned with rich dark-wood paneling, brass standing floor lamps, artisanal bed runners, and dedicated armchair lounge seating.",
+      "Spacious room with king bed, handcrafted armchair lounge, and executive work desk.",
     fullDescription:
       "Designed for travelers who value refined detailing and extra room to unwind, our Executive Room boasts gold-and-maroon artisanal accents, high ceilings, and an en-suite sitting lounge with twin armchairs. Ideal for both leisure travelers and business executives seeking a restful haven with high-speed connectivity and concierge privileges.",
     highlights: [
@@ -229,7 +229,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Spacious En-Suite with Glass Partition & Vanity",
     airConditioned: true,
     shortDescription:
-      "A grand suite incorporating a master bedroom sanctuary and a private four-seater glass dining salon for intimate in-suite gourmet meals.",
+      "Grand suite with master bedroom and a private 4-seater glass dining area.",
     fullDescription:
       "The Suite Room is our signature haven for discerning couples and families. Featuring a distinct architectural division between sleeping and dining quarters, it showcases a designer square glass dining table with four upholstered hardwood chairs, bespoke mood cove lighting, multiple entertainment screens, and expansive windows welcoming morning tropical sun.",
     highlights: [
@@ -288,7 +288,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     bathroom: "Luxury Spa Rain Shower, Hair Dryer & Deluxe Toiletries",
     airConditioned: true,
     shortDescription:
-      "Our most prestigious accommodation: maximum space, private dining parlor, executive king suite, panoramic palm outlooks, and VIP hospitality.",
+      "Our most prestigious suite with panoramic views, private dining parlor, and VIP care.",
     fullDescription:
       "The Premium Suite Room represents the absolute zenith of luxury at Hotel Palmbeach. Expansive square footage accommodates an opulent bedroom with gold-embroidered textiles, a full dining salon for hosting intimate dinners, ergonomic executive work center, and bespoke bath amenities. Perfect for honeymooners, wedding parties, or travelers desiring premier comfort.",
     highlights: [

@@ -108,8 +108,8 @@ function BookingModalDialog({
                   <p className="text-sm sm:text-base font-bold text-[#F4ECE1] leading-relaxed">
                     There will be a confirmation call from our end shortly to finalize your booking details.
                   </p>
-                  <p className="text-xs text-neutral-300 mt-2">
-                    Our reservation desk will contact you via phone / WhatsApp to verify arrival dates, guest preferences, and payment upon check-in.
+                  <p className="text-xs text-neutral-300 mt-1.5">
+                    Our front desk will contact you via call or WhatsApp shortly.
                   </p>
                 </div>
               </div>
@@ -244,11 +244,11 @@ function BookingModalDialog({
               </div>
 
               {/* Confirmation Call Notice Badge */}
-              <div className="bg-[#F4ECE1] border border-[#E3D4C1] rounded-2xl p-4 flex items-start gap-3">
-                <PhoneCall className="w-5 h-5 text-[#1B4332] shrink-0 mt-0.5" />
-                <div className="text-xs text-neutral-700 leading-relaxed">
-                  <span className="font-bold text-[#1B4332] block">Confirmation Call from Front Desk</span>
-                  Upon submission, our team will call your number directly to confirm your arrival dates and finalize your reservation.
+              <div className="bg-[#F4ECE1] border border-[#E3D4C1] rounded-2xl p-3.5 flex items-center gap-3">
+                <PhoneCall className="w-4 h-4 text-[#1B4332] shrink-0" />
+                <div className="text-xs text-neutral-700">
+                  <span className="font-bold text-[#1B4332]">Confirmation Call: </span>
+                  Our front desk will call you directly to confirm your dates & finalize your booking.
                 </div>
               </div>
 

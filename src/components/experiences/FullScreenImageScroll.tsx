@@ -71,7 +71,7 @@ export default function FullScreenImageScroll() {
                 Twilight Over the Palms
               </span>
               <h4 className="text-2xl sm:text-3xl font-light font-editorial leading-snug">
-                As the daylight softens, quiet paths guide you back to serenity.
+                Quiet paths and illuminated palm groves at dusk.
               </h4>
             </div>
             <div className="text-xs font-mono text-white/70">

@@ -56,7 +56,7 @@ export default function AmenitiesIntro() {
             </h2>
 
             <p className="text-base sm:text-lg text-neutral-700 font-medium leading-relaxed max-w-xl">
-              At Hotel Palmbeach, luxury is defined by ease and serenity. We have pared away the superfluous to elevate what truly matters: restful beds, rejuvenating sea breezes, locally celebrated cuisine, and genuine personal care that anticipates your every wish.
+              Restful rooms, fresh ocean air, authentic coastal dining, and attentive 24/7 personal care.
             </p>
 
             <div className="pt-2">
