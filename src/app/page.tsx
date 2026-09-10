@@ -129,7 +129,6 @@ export default function Home() {
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   </div>
-                  <span className="uppercase tracking-widest text-[11px] font-bold">3-Star Hotel · Palakkad</span>
                 </div>
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
