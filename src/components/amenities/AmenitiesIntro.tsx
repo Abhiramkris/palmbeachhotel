@@ -30,12 +30,12 @@ const EXPERIENCES: ExperienceItem[] = [
   {
     id: "grounds",
     tabTitle: "Tranquil Grounds",
-    headline: "Water Fountain & Swaying Palms",
+    headline: "Landscaped Courtyard & Palms",
     description:
-      "Step into a calm green haven framed by illuminated fountain waters and lush palm groves in Palakkad.",
-    image: HOTEL_ASSETS.exterior.receptionFountain,
-    badge: "Courtyard & Entrance",
-    perk: "Fresh Greenery & Breeze",
+      "Step into a calm green sanctuary framed by towering palm trees and tranquil paved grounds in Palakkad.",
+    image: HOTEL_ASSETS.exterior.heroExteriorDay,
+    badge: "Verdant Grounds",
+    perk: "Towering Palms & Fresh Air",
     icon: Palmtree,
   },
   {

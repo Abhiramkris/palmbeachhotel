@@ -2,13 +2,13 @@
 
 export default function MarqueeStrip() {
   const items = [
-    "HOTEL PALMBEACH",
-    "TROPICAL ESCAPE",
+    "PALMSHORE HOTEL",
+    "TRANQUIL GETAWAY",
     "YOUR SANCTUARY IN PALAKKAD",
     "RELAX",
     "UNWIND",
     "AUTHENTIC KERALA HOSPITALITY",
-    "EXPERIENCE PALMBEACH",
+    "EXPERIENCE PALMSHORE",
     "GOURMET DINING",
     "SERENE PALM GROVES",
   ];

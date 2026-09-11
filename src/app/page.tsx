@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingBookingForm from "@/components/booking/FloatingBookingForm";
@@ -107,7 +107,7 @@ export default function Home() {
           {/* Large Cinematic Background Photograph using hero_polished.png */}
           <Image
             src={HOTEL_ASSETS.exterior.heroPolished}
-            alt="Hotel Palmbeach illuminated courtyard and palm trees in evening light"
+            alt="Palmshore Hotel illuminated courtyard and palm trees in evening light"
             fill
             className="object-cover brightness-95 scale-102"
             priority
@@ -122,14 +122,6 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* Left Column: Editorial Headline & Storytelling */}
               <div className="lg:col-span-7 space-y-6 text-white max-w-2xl">
-                {/* 3-Star Hotel Badge */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-xs font-semibold text-[#E5D0B5] shadow-lg">
-                  <div className="flex items-center gap-0.5 text-amber-400">
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  </div>
-                </div>
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight leading-[1.05] drop-shadow-2xl text-white">
                   Stay Where Palm Trees <br className="hidden sm:inline" />
@@ -152,7 +144,7 @@ export default function Home() {
                     href="#experiences"
                     className="px-8 py-3.5 bg-white/20 hover:bg-white/30 border border-white/40 text-white text-xs uppercase tracking-widest font-bold rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2"
                   >
-                    <span>Discover Palmbeach</span>
+                    <span>Discover Palmshore</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -238,7 +230,7 @@ export default function Home() {
                 Visual Journey
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold font-editorial text-neutral-900">
-                Moments at Hotel Palmbeach
+                Moments at Palmshore Hotel
               </h2>
               <p className="text-sm sm:text-base text-neutral-700 font-medium">
                 A visual tour of our suites, dining, and tranquil grounds.

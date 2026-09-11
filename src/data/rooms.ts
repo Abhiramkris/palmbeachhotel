@@ -51,7 +51,7 @@ export const HOTEL_ROOMS: RoomType[] = [
   {
     slug: "standard-non-ac",
     name: "Standard Non-A/C Room",
-    tagline: "Naturally ventilated comfort surrounded by tropical greenery",
+    tagline: "Naturally ventilated comfort surrounded by lush palm greenery",
     rate: 1870,
     extraPersonRate: 400,
     capacity: {
@@ -121,7 +121,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     shortDescription:
       "Climate-controlled comfort with plush king bed, rain shower, and calming garden views.",
     fullDescription:
-      "The Standard A/C Room combines crisp modern climate control with tropical warmth. Relax on a generous king-size bed fitted with premium mattress toppers and accent pillows. Complete with a flat-screen television, complimentary high-speed Wi-Fi, and a contemporary bathroom with rain shower, it delivers effortless comfort after a sunny day exploring the coast.",
+      "The Standard A/C Room combines crisp modern climate control with serene comfort. Relax on a generous king-size bed fitted with premium mattress toppers and accent pillows. Complete with a flat-screen television, complimentary high-speed Wi-Fi, and a contemporary bathroom with rain shower, it delivers effortless comfort after a day exploring the heritage and scenic beauty of Palakkad.",
     highlights: [
       "Whisper-quiet split air-conditioning with individual remote",
       "Spacious king bed with custom headboard nightstands",
@@ -225,13 +225,13 @@ export const HOTEL_ROOMS: RoomType[] = [
     },
     bedType: "Master King Bed",
     size: "420 sq.ft (39 m²)",
-    view: "Panoramic Palm & Fountain View",
+    view: "Panoramic Palm & Courtyard View",
     bathroom: "Spacious En-Suite with Glass Partition & Vanity",
     airConditioned: true,
     shortDescription:
       "Grand suite with master bedroom and a private 4-seater glass dining area.",
     fullDescription:
-      "The Suite Room is our signature haven for discerning couples and families. Featuring a distinct architectural division between sleeping and dining quarters, it showcases a designer square glass dining table with four upholstered hardwood chairs, bespoke mood cove lighting, multiple entertainment screens, and expansive windows welcoming morning tropical sun.",
+      "The Suite Room is our signature haven for discerning couples and families. Featuring a distinct architectural division between sleeping and dining quarters, it showcases a designer square glass dining table with four upholstered hardwood chairs, bespoke mood cove lighting, multiple entertainment screens, and expansive windows welcoming morning sun.",
     highlights: [
       "In-suite private glass dining table for 4 guests",
       "Spacious separated layout for relaxation and dining",
@@ -275,7 +275,7 @@ export const HOTEL_ROOMS: RoomType[] = [
   {
     slug: "premium-suite",
     name: "Premium Suite Room",
-    tagline: "The pinnacle of Palmbeach luxury, hospitality, and panoramic Palakkad outlooks",
+    tagline: "The pinnacle of Palmshore luxury, hospitality, and panoramic Palakkad outlooks",
     rate: 3470,
     extraPersonRate: 400,
     capacity: {
@@ -284,13 +284,13 @@ export const HOTEL_ROOMS: RoomType[] = [
     },
     bedType: "Grand California King Bed",
     size: "520 sq.ft (48 m²)",
-    view: "Fountain, Palms & Atrium View",
+    view: "Palms & Architectural Atrium View",
     bathroom: "Luxury Spa Rain Shower, Hair Dryer & Deluxe Toiletries",
     airConditioned: true,
     shortDescription:
       "Our most prestigious suite with panoramic views, private dining parlor, and VIP care.",
     fullDescription:
-      "The Premium Suite Room represents the absolute zenith of luxury at Hotel Palmbeach. Expansive square footage accommodates an opulent bedroom with gold-embroidered textiles, a full dining salon for hosting intimate dinners, ergonomic executive work center, and bespoke bath amenities. Perfect for honeymooners, wedding parties, or travelers desiring premier comfort.",
+      "The Premium Suite Room represents the absolute zenith of luxury at Palmshore Hotel. Expansive square footage accommodates an opulent bedroom with gold-embroidered textiles, a full dining salon for hosting intimate dinners, ergonomic executive work center, and bespoke bath amenities. Perfect for honeymooners, wedding parties, or travelers desiring premier comfort.",
     highlights: [
       "Largest floor plan on property with dedicated salon & bedroom",
       "Complimentary chef-curated gourmet breakfast delivered to suite",

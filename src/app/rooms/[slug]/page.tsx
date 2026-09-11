@@ -21,15 +21,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!room) {
     return {
-      title: "Room Not Found | Hotel Palmbeach",
+      title: "Room Not Found | Palmshore Hotel",
     };
   }
 
   return {
-    title: `${room.name} — ₹${room.rate.toLocaleString("en-IN")}/night | Hotel Palmbeach`,
+    title: `${room.name} — ₹${room.rate.toLocaleString("en-IN")}/night | Palmshore Hotel`,
     description: room.shortDescription,
     openGraph: {
-      title: `${room.name} — Hotel Palmbeach`,
+      title: `${room.name} — Palmshore Hotel`,
       description: room.shortDescription,
       images: [room.primaryImage],
     },

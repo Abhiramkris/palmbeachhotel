@@ -15,7 +15,7 @@ export default function FinalCTA({ onOpenBooking }: FinalCTAProps) {
       {/* Background evening/illuminated photograph */}
       <Image
         src={HOTEL_ASSETS.exterior.buildingFacadeNight}
-        alt="Hotel Palmbeach evening facade"
+        alt="Palmshore Hotel evening facade"
         fill
         className="object-cover brightness-50"
       />
@@ -27,7 +27,7 @@ export default function FinalCTA({ onOpenBooking }: FinalCTAProps) {
         </span>
 
         <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-editorial tracking-tight text-white leading-tight">
-          Your Palmbeach Escape <br />
+          Your Palmshore Stay <br />
           <span className="italic font-bold text-[#E5D0B5]">Starts Here.</span>
         </h2>
 

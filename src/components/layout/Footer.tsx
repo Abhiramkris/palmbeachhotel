@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="relative h-16 sm:h-20 w-52 sm:w-64 brightness-0 invert opacity-95 transition-opacity group-hover:opacity-100">
                 <Image
                   src="/assets/brand/palmshore-logo.png"
-                  alt="Hotel Palmbeach Logo"
+                  alt="Palmshore Hotel Logo"
                   fill
                   className="object-contain object-left"
                 />
@@ -86,7 +86,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-neutral-400 font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-1" />
-                <span>Hotel Palmbeach, Palakkad, Kerala, India</span>
+                <span>Palmshore Hotel, Palakkad, Kerala, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
@@ -96,8 +96,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <a href="mailto:stay@hotelpalmbeach.com" className="hover:text-white transition-colors">
-                  stay@hotelpalmbeach.com
+                <a href="mailto:stay@palmshorehotel.com" className="hover:text-white transition-colors">
+                  stay@palmshorehotel.com
                 </a>
               </li>
             </ul>
@@ -138,7 +138,7 @@ export default function Footer() {
             {subscribed ? (
               <div className="p-3 bg-emerald-950/60 border border-emerald-800/60 rounded-xl text-emerald-200 text-xs flex items-center gap-2">
                 <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Thank you. You are now subscribed to Palmbeach dispatches.</span>
+                <span>Thank you. You are now subscribed to Palmshore dispatches.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -167,7 +167,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-light">
-          <p>© 2026 Hotel Palmbeach. All rights reserved.</p>
+          <p>© 2026 Palmshore Hotel. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-neutral-300 transition">
               Privacy Policy

@@ -18,7 +18,7 @@ export default function NearbyAttractions() {
               Curated Palakkad Attractions
             </h2>
             <p className="text-sm text-neutral-700 font-medium">
-              Explore historic forts, scenic dams, and cultural heritage agraharams within minutes of Hotel Palmbeach.
+              Explore historic forts, scenic dams, and cultural heritage agraharams within minutes of Palmshore Hotel.
             </p>
           </div>
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#1B4332]">

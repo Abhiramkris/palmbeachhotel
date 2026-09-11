@@ -52,17 +52,17 @@ export const HOTEL_GALLERY_ITEMS: HotelAssetItem[] = [
   {
     id: "exterior-day",
     title: "Courtyard & Hotel Grounds",
-    description: "Lush tropical palm courtyard and elegant exterior facade in natural daylight.",
+    description: "Lush green palm courtyard and elegant exterior facade in natural daylight.",
     category: "exterior",
     src: HOTEL_ASSETS.exterior.heroExteriorDay,
     featured: true,
   },
   {
-    id: "reception-fountain",
-    title: "Porte-Cochère & Fountain",
-    description: "Grand entrance driveway featuring an illuminated water fountain.",
+    id: "exterior-glass-staircase-alt",
+    title: "Glass Atrium Staircase",
+    description: "Contemporary glass staircase architecture illuminated against the night sky.",
     category: "exterior",
-    src: HOTEL_ASSETS.exterior.receptionFountain,
+    src: HOTEL_ASSETS.exterior.glassStaircaseNightAlt,
   },
   {
     id: "exterior-night-wide",

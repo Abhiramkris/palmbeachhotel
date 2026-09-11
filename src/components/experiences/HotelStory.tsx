@@ -21,7 +21,7 @@ export default function HotelStory() {
           {/* Left: Kinetic Editorial Typography */}
           <div className="lg:col-span-7 space-y-8">
             <span className="text-xs uppercase tracking-[0.3em] text-[#E5D0B5] font-bold block">
-              The Palmbeach Philosophy
+              The Palmshore Philosophy
             </span>
 
             {/* Kinetic / Editorial Heading */}
@@ -65,18 +65,18 @@ export default function HotelStory() {
           <div className="lg:col-span-5 space-y-6">
             <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src={HOTEL_ASSETS.exterior.receptionFountain}
-                alt="Hotel Palmbeach entrance and fountain"
+                src={HOTEL_ASSETS.exterior.heroExteriorDay}
+                alt="Palmshore Hotel landscaped grounds and palm trees"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white text-xs">
                 <span className="text-[10px] uppercase tracking-widest text-[#C5A880] block mb-1">
-                  Arrival Court
+                  Resort Grounds
                 </span>
                 <p className="font-light text-neutral-200">
-                  Illuminated fountain reception & entrance
+                  Landscaped palms, quiet walkways, and contemporary architecture
                 </p>
               </div>
             </div>

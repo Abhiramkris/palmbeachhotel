@@ -38,7 +38,7 @@ export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
     id: "test-4",
     quote:
-      "Immaculately clean rooms, wonderful fountain courtyard, and great food. Exceeded all expectations.",
+      "Immaculately clean rooms, wonderful palm courtyard, and great food. Exceeded all expectations.",
     author: "Prashanth Nair",
     location: "Cochin, Kerala",
     stayType: "Executive King Room",

@@ -77,7 +77,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           >
             <Image
               src="/assets/brand/palmshore-logo.png"
-              alt="Hotel Palmbeach"
+              alt="Palmshore Hotel"
               fill
               className="object-contain object-left"
               priority

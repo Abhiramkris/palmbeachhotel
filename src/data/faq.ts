@@ -43,7 +43,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     id: "faq-children",
-    question: "Are children allowed at Hotel Palmbeach?",
+    question: "Are children allowed at Palmshore Hotel?",
     answer:
       "Yes, children of all ages are welcome. Children under 6 stay free when utilizing existing bedding.",
   },

@@ -90,7 +90,7 @@ export default function FullScreenImageScroll() {
           {/* Photograph */}
           <Image
             src={HOTEL_ASSETS.exterior.buildingNightWide}
-            alt="Hotel Palmbeach evening illuminated grounds"
+            alt="Palmshore Hotel evening illuminated grounds"
             fill
             className="object-cover brightness-105"
             sizes="100vw"

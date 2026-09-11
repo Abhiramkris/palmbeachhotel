@@ -51,6 +51,6 @@ export const NEARBY_ATTRACTIONS: Attraction[] = [
     description:
       "Pristine rainforest biosphere reserve safeguarding rare flora, fauna, and untouched virgin greenery.",
     category: "Wilderness & Sanctuary",
-    image: "/assets/exterior/reception-entrance-fountain.jpeg",
+    image: "/assets/exterior/hotel-building-night-wide.jpeg",
   },
 ];
