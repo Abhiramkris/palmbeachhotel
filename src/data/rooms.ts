@@ -231,7 +231,7 @@ export const HOTEL_ROOMS: RoomType[] = [
     shortDescription:
       "Grand suite with master bedroom and a private 4-seater glass dining area.",
     fullDescription:
-      "The Suite Room is our signature haven for discerning couples and families. Featuring a distinct architectural division between sleeping and dining quarters, it showcases a designer square glass dining table with four upholstered hardwood chairs, bespoke mood cove lighting, multiple entertainment screens, and expansive windows welcoming morning sun.",
+      "The Suite Room is our signature haven for discerning couples and families. Featuring a distinct architectural division between sleeping and dining quarters, it showcases a designer square glass dining table with four upholstered hardwood chairs, warm ambient cove lighting, multiple entertainment screens, and expansive windows welcoming morning sun.",
     highlights: [
       "In-suite private glass dining table for 4 guests",
       "Spacious separated layout for relaxation and dining",
@@ -260,7 +260,7 @@ export const HOTEL_ROOMS: RoomType[] = [
       },
       {
         src: "/assets/rooms/deluxe-room-seating-area.jpeg",
-        caption: "Adjacent parlor sitting area for evening tea",
+        caption: "Adjacent sitting area for evening tea",
       },
       {
         src: "/assets/rooms/deluxe-room-work-desk.jpeg",
@@ -282,30 +282,30 @@ export const HOTEL_ROOMS: RoomType[] = [
       baseGuests: 2,
       maxGuests: 4,
     },
-    bedType: "Grand California King Bed",
+    bedType: "Grand King Bed",
     size: "520 sq.ft (48 m²)",
     view: "Palms & Architectural Atrium View",
     bathroom: "Luxury Spa Rain Shower, Hair Dryer & Deluxe Toiletries",
     airConditioned: true,
     shortDescription:
-      "Our most prestigious suite with panoramic views, private dining parlor, and VIP care.",
+      "Our most prestigious suite with panoramic views, private dining area, and VIP care.",
     fullDescription:
-      "The Premium Suite Room represents the absolute zenith of luxury at Palmshore Hotel. Expansive square footage accommodates an opulent bedroom with gold-embroidered textiles, a full dining salon for hosting intimate dinners, ergonomic executive work center, and bespoke bath amenities. Perfect for honeymooners, wedding parties, or travelers desiring premier comfort.",
+      "The Premium Suite Room is our most spacious and luxurious accommodation at Palmshore Hotel. Designed for comfort, it features an expansive master bedroom with fine Kerala craftsmanship, a dedicated glass dining table for in-room family meals, executive work desk, and deluxe bath amenities. Perfect for families, wedding guests, or travelers seeking premier comfort.",
     highlights: [
-      "Largest floor plan on property with dedicated salon & bedroom",
+      "Largest floor plan on property with dedicated dining area & master bedroom",
       "Complimentary chef-curated gourmet breakfast delivered to suite",
-      "Private dining salon with glass table and high-definition smart TV",
+      "Private glass dining area with high-definition smart TV",
       "Priority check-in, late check-out upon request, and VIP turn-down service",
     ],
     amenities: [
-      { name: "Full Dining Salon", icon: "utensils" },
+      { name: "Private Dining Area", icon: "utensils" },
       { name: "Grand King Bed", icon: "bed" },
       { name: "Multi-Zone Climate Control", icon: "snowflake" },
       { name: "Complimentary Gourmet Breakfast", icon: "croissant" },
       { name: "Stocked Mini Bar", icon: "wine" },
       { name: "High-Speed Fiber Wi-Fi", icon: "wifi" },
       { name: "Luxury Bathrobes & Slippers", icon: "sparkles" },
-      { name: "Dedicated 24/7 Butler Support", icon: "bell-ring" },
+      { name: "24/7 Room Service & Care", icon: "bell-ring" },
     ],
     primaryImage: "/assets/rooms/executive-room-bed-front.jpeg",
     gallery: [
@@ -315,7 +315,7 @@ export const HOTEL_ROOMS: RoomType[] = [
       },
       {
         src: "/assets/rooms/suite-room-dining-area.jpeg",
-        caption: "Exclusive suite dining salon with warm recessed accent niches",
+        caption: "Exclusive suite dining area with warm recessed accent niches",
       },
       {
         src: "/assets/rooms/executive-room-bed-side.jpeg",

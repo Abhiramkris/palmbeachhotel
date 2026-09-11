@@ -91,7 +91,7 @@ export const HOTEL_GALLERY_ITEMS: HotelAssetItem[] = [
   {
     id: "deluxe-room-bed",
     title: "Deluxe King Room",
-    description: "Plush king-size bed with crisp linens, modern headboard lighting, and bespoke furnishings.",
+    description: "Plush king-size bed with crisp linens, modern headboard lighting, and comfortable furnishings.",
     category: "rooms",
     src: HOTEL_ASSETS.rooms.deluxeBed,
     featured: true,

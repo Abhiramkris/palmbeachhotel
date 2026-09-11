@@ -111,7 +111,7 @@ export default function RoomDetailView({ room }: RoomDetailViewProps) {
                 </p>
               </div>
 
-              {/* Tariff Card */}
+              {/* Rate Card */}
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-5 flex items-center justify-between lg:flex-col lg:items-start gap-4">
                 <div>
                   <span className="text-[11px] uppercase tracking-wider text-neutral-300 block">
@@ -248,7 +248,7 @@ export default function RoomDetailView({ room }: RoomDetailViewProps) {
                 <div className="sticky top-28 bg-white p-6 sm:p-8 rounded-3xl border border-[#E5DFD5] shadow-xl space-y-6">
                   <div className="border-b border-neutral-100 pb-4">
                     <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
-                      Tariff Summary
+                      Rate Summary
                     </span>
                     <div className="flex items-baseline gap-2 mt-1">
                       <span className="text-3xl font-bold font-mono text-[#1B4332]">
@@ -318,7 +318,7 @@ export default function RoomDetailView({ room }: RoomDetailViewProps) {
                 href="/#rooms"
                 className="text-xs uppercase tracking-widest font-semibold text-[#1B4332] hover:text-emerald-700 flex items-center gap-1.5"
               >
-                <span>View Full Tariff Schedule</span>
+                <span>View All Room Rates</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -368,7 +368,7 @@ export default function RoomDetailView({ room }: RoomDetailViewProps) {
       {/* Floating Mobile Bottom Booking Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-neutral-200 p-4 flex items-center justify-between shadow-2xl">
         <div>
-          <span className="text-[10px] text-neutral-500 uppercase tracking-wider block">Tariff</span>
+          <span className="text-[10px] text-neutral-500 uppercase tracking-wider block">Room Rate</span>
           <span className="text-xl font-bold font-mono text-[#1B4332]">
             ₹{room.rate.toLocaleString("en-IN")}
           </span>

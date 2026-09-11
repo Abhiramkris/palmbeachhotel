@@ -129,7 +129,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base sm:text-xl text-neutral-100 font-medium leading-relaxed max-w-xl drop-shadow-md">
-                  Tranquil resort in Palakkad with verified tariffs and heartfelt Kerala hospitality.
+                  Tranquil hotel in Palakkad with direct room rates and heartfelt Kerala hospitality.
                 </p>
 
                 {/* CTAs */}
@@ -196,7 +196,7 @@ export default function Home() {
               </div>
 
               <div className="text-right shrink-0 bg-white p-3.5 rounded-2xl border border-[#E7E2DA] shadow-xs">
-                <span className="text-xs font-mono text-neutral-500 block font-semibold">Official Tariff Schedule</span>
+                <span className="text-xs font-mono text-neutral-500 block font-semibold">Official Room Rates</span>
                 <span className="text-xs text-[#1B4332] font-bold">Extra Person: ₹400 · Tax Applicable</span>
               </div>
             </div>

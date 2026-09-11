@@ -45,7 +45,7 @@ const EXPERIENCES: ExperienceItem[] = [
     description:
       "Crisp linens, silent climate control, and orthopedic beds designed for deep, restorative sleep.",
     image: HOTEL_ASSETS.rooms.deluxeBed,
-    badge: "Tariffs from ₹1,870",
+    badge: "Rates from ₹1,870",
     perk: "Orthopedic Sleep Comfort",
     icon: Bed,
   },
@@ -65,7 +65,7 @@ const EXPERIENCES: ExperienceItem[] = [
     tabTitle: "24/7 Care",
     headline: "Round-the-Clock Front Desk",
     description:
-      "Zero hidden fees, transparent desk tariffs, and heartfelt personal assistance whenever needed.",
+      "Zero hidden fees, transparent desk rates, and heartfelt personal assistance whenever needed.",
     image: HOTEL_ASSETS.interior.lobbyLounge,
     badge: "Direct Desk Rates",
     perk: "Attentive Personal Care",

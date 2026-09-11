@@ -13,7 +13,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     id: "faq-breakfast",
-    question: "Is breakfast included in my room tariff?",
+    question: "Is breakfast included in my room rate?",
     answer:
       "Complimentary breakfast is included with all Suite bookings. Available à la carte or buffet for all other rooms.",
   },

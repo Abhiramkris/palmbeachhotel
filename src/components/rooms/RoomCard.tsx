@@ -84,11 +84,11 @@ export default function RoomCard({ room }: RoomCardProps) {
           </div>
         </div>
 
-        {/* Card Footer: Tariff & Action CTA */}
+        {/* Card Footer: Rates & Action CTA */}
         <div className="pt-5 mt-4 border-t border-neutral-150 flex items-center justify-between">
           <div>
             <span className="text-[10px] uppercase tracking-wider text-neutral-500 font-bold block">
-              Official Tariff
+              Room Rate
             </span>
             <div className="flex items-baseline gap-1">
               <span className="text-2xl font-black font-editorial tracking-tight text-[#1B4332]">

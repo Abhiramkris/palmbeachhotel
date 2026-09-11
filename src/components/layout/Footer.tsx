@@ -138,7 +138,7 @@ export default function Footer() {
             {subscribed ? (
               <div className="p-3 bg-emerald-950/60 border border-emerald-800/60 rounded-xl text-emerald-200 text-xs flex items-center gap-2">
                 <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Thank you. You are now subscribed to Palmshore dispatches.</span>
+                <span>Thank you. You are now subscribed to Palmshore updates.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -175,8 +175,8 @@ export default function Footer() {
             <a href="#" className="hover:text-neutral-300 transition">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-neutral-300 transition">
-              Hotel Tariff Schedule
+            <a href="#rooms" className="hover:text-neutral-300 transition">
+              Room Rates
             </a>
           </div>
         </div>

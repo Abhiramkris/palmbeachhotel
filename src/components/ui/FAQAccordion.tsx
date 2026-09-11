@@ -22,7 +22,7 @@ export default function FAQAccordion() {
             Frequently Asked Questions
           </h2>
           <p className="text-sm text-neutral-700 font-medium max-w-lg mx-auto">
-            Everything you need to know about your arrival, dining, room tariffs, and hospitality services.
+            Everything you need to know about your arrival, dining, room rates, and hospitality services.
           </p>
         </div>
 
