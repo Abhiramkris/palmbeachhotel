@@ -39,13 +39,7 @@ export default function HotelStory() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-4 border-t border-white/15 max-w-lg">
-              <div>
-                <span className="block text-3xl sm:text-4xl font-editorial font-bold text-[#C5A880]">24+</span>
-                <span className="text-[11px] uppercase tracking-wider text-neutral-300 mt-1 block">
-                  Boutique Suites
-                </span>
-              </div>
+            <div className="grid grid-cols-2 gap-8 pt-4 border-t border-white/15 max-w-sm">
               <div>
                 <span className="block text-3xl sm:text-4xl font-editorial font-bold text-[#C5A880]">24/7</span>
                 <span className="text-[11px] uppercase tracking-wider text-neutral-300 mt-1 block">

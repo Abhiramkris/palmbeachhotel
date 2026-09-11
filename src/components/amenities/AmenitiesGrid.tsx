@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Waves,
+  ShieldCheck,
   Wifi,
   UtensilsCrossed,
   ConciergeBell,
@@ -12,7 +12,7 @@ import {
 import { HOTEL_AMENITIES, Amenity } from "@/data/amenities";
 
 const iconMap: Record<string, React.ReactNode> = {
-  waves: <Waves className="w-6 h-6" />,
+  "shield-check": <ShieldCheck className="w-6 h-6" />,
   wifi: <Wifi className="w-6 h-6" />,
   "utensils-crossed": <UtensilsCrossed className="w-6 h-6" />,
   "concierge-bell": <ConciergeBell className="w-6 h-6" />,
@@ -42,7 +42,7 @@ export default function AmenitiesGrid() {
               <div>
                 {/* Icon with gentle hover animation */}
                 <div className="w-14 h-14 rounded-2xl bg-[#EDE7DC] text-[#1B4332] flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-[#1B4332] group-hover:text-white group-hover:scale-110 group-hover:rotate-3 shadow-xs">
-                  {iconMap[amenity.icon] || <Waves className="w-6 h-6" />}
+                  {iconMap[amenity.icon] || <ShieldCheck className="w-6 h-6" />}
                 </div>
 
                 {/* Title & Description with slight typography shift */}

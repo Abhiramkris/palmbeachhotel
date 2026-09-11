@@ -26,7 +26,7 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <span className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20">
-                  Theatre-Style Hall (Up to 250+ Guests)
+                  Theatre & Conference Layouts
                 </span>
               </div>
 
@@ -90,9 +90,9 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                     <Users className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-neutral-900">250+ Capacity</h4>
+                    <h4 className="font-bold text-sm text-neutral-900">Flexible Seating</h4>
                     <p className="text-xs text-neutral-600 mt-0.5">
-                      Flexible theatre or banquet seating.
+                      Theatre, seminar or banquet seating.
                     </p>
                   </div>
                 </div>

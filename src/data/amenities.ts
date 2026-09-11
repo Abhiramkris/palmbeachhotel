@@ -7,10 +7,10 @@ export interface Amenity {
 
 export const HOTEL_AMENITIES: Amenity[] = [
   {
-    id: "pool",
-    name: "Swimming Pool",
-    description: "Outdoor pool surrounded by palm gardens and sun loungers.",
-    icon: "waves",
+    id: "parking",
+    name: "Free On-Site Parking",
+    description: "Spacious, secure vehicle parking within the hotel premises.",
+    icon: "shield-check",
   },
   {
     id: "wifi",
