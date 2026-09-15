@@ -98,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-neutral-400 font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-1" />
-                <span>Palmshore Hotel, Palakkad, Kerala, India</span>
+                <span>Near Govt Hospital, Pollachi-Palakkad Road, Kozhinjampara - 678555</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
