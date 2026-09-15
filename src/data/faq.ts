@@ -51,6 +51,6 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "faq-modify",
     question: "How can I modify or extend my reservation?",
     answer:
-      "Contact our 24/7 reception via phone or WhatsApp with your reference number to quickly modify dates.",
+      "Contact our 24/7 reception via phone or WhatsApp at +91 95390 73788 with your reference number to quickly modify dates.",
   },
 ];

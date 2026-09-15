@@ -161,7 +161,7 @@ export const HOTEL_GALLERY_ITEMS: HotelAssetItem[] = [
   {
     id: "banquet-hall-wide",
     title: "Grand Banquet & Conference Hall",
-    description: "Expansive multi-purpose hall equipped for conferences, receptions, and corporate galas.",
+    description: "Expansive 150+ guest capacity hall equipped for conferences, receptions, and corporate galas.",
     category: "banquet",
     src: HOTEL_ASSETS.banquet.conferenceHallWide,
     featured: true,
@@ -169,7 +169,7 @@ export const HOTEL_GALLERY_ITEMS: HotelAssetItem[] = [
   {
     id: "banquet-rows",
     title: "Theatre & Event Seating",
-    description: "Flexible theatre-style setup with draped banquet chairs and climate control.",
+    description: "Flexible theatre-style setup for 150+ guests with draped banquet chairs and climate control.",
     category: "banquet",
     src: HOTEL_ASSETS.banquet.conferenceHallRows,
   },

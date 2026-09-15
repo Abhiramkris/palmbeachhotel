@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { User, Phone, Mail, Hotel, ArrowRight, PhoneCall } from "lucide-react";
+import { User, Phone, Mail, Hotel, ArrowRight, PhoneCall, Loader2 } from "lucide-react";
 import { ALL_BOOKING_TYPES } from "@/data/rooms";
+import { sendContactInquiry } from "@/lib/contact";
 
 interface FloatingBookingFormProps {
   onSubmitInquiry: (params: {
@@ -10,6 +11,7 @@ interface FloatingBookingFormProps {
     name: string;
     phone: string;
     email: string;
+    bookingRef?: string;
   }) => void;
   selectedSlug?: string;
   onSlugChange?: (slug: string) => void;
@@ -36,14 +38,39 @@ export default function FloatingBookingForm({
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    const ref = `PS-${Math.floor(100000 + Math.random() * 900000)}`;
+    const selectedOption =
+      ALL_BOOKING_TYPES.find((t) => t.slug === selectedSlug) || ALL_BOOKING_TYPES[0];
+
+    await sendContactInquiry({
+      sender_name: name,
+      sender_email: email,
+      phone_number: phone,
+      subject: `Quick Booking Request: ${selectedOption.name} [Ref: ${ref}]`,
+      message:
+        `Quick Reservation Request from Palmshore Hotel website:\n` +
+        `Reference Code: ${ref}\n` +
+        `Selection: ${selectedOption.name} (${selectedOption.rateLabel})\n` +
+        `Guest Name: ${name}\n` +
+        `Phone / WhatsApp: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Requested Confirmation Call: Yes`,
+    });
+
+    setIsSubmitting(false);
     onSubmitInquiry({
       roomSlug: selectedSlug,
       name,
       phone,
       email,
+      bookingRef: ref,
     });
   };
 
@@ -160,10 +187,20 @@ export default function FloatingBookingForm({
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full py-3.5 px-6 rounded-2xl bg-[#E05332] hover:bg-[#C94324] text-white font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+          disabled={isSubmitting}
+          className="w-full py-3.5 px-6 rounded-2xl bg-[#E05332] hover:bg-[#C94324] disabled:opacity-75 disabled:cursor-not-allowed text-white font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
         >
-          <span>Request Booking Call</span>
-          <ArrowRight className="w-4 h-4" />
+          {isSubmitting ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin text-white" />
+              <span>Sending Request...</span>
+            </>
+          ) : (
+            <>
+              <span>Request Booking Call</span>
+              <ArrowRight className="w-4 h-4" />
+            </>
+          )}
         </button>
       </form>
     </div>

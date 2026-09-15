@@ -43,7 +43,7 @@ export const ALL_BOOKING_TYPES: BookingTypeOption[] = [
   { slug: "executive-room", name: "Executive Room", category: "room", rateLabel: "₹2,530 / night" },
   { slug: "suite-room", name: "Suite Room", category: "room", rateLabel: "₹2,960 / night" },
   { slug: "premium-suite", name: "Premium Suite Room", category: "room", rateLabel: "₹3,470 / night" },
-  { slug: "grand-banquet-hall", name: "Grand Banquet Hall", category: "venue", rateLabel: "Conference & Event Dais" },
+  { slug: "grand-banquet-hall", name: "Grand Banquet Hall", category: "venue", rateLabel: "150+ Capacity Event Dais" },
   { slug: "palmshore-restaurant", name: "Palmshore Restaurant & Dining", category: "dining", rateLabel: "Table & Group Dining" },
 ];
 

@@ -3,22 +3,34 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowRight, Check } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight, Check, Loader2 } from "lucide-react";
+import { sendContactInquiry } from "@/lib/contact";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
-    }
+    if (!email || isSubmitting) return;
+
+    setIsSubmitting(true);
+    const emailToSubmit = email.trim();
+    await sendContactInquiry({
+      sender_name: "Newsletter Subscriber",
+      sender_email: emailToSubmit,
+      subject: "Newsletter Subscription - Palmshore Hotel",
+      message: `Guest subscribed to Palmshore Hotel newsletter updates.\nSubscriber Email: ${emailToSubmit}`,
+    });
+
+    setIsSubmitting(false);
+    setSubscribed(true);
+    setEmail("");
   };
 
   return (
-    <footer className="bg-[#141815] text-[#D8D5CE] pt-20 pb-12 border-t border-neutral-800">
+    <footer id="contact" className="bg-[#141815] text-[#D8D5CE] pt-20 pb-12 border-t border-neutral-800 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-neutral-800/80">
           {/* Brand Column */}
@@ -90,14 +102,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210 / +91 497 2700000
+                <a href="tel:+919539073788" className="hover:text-white transition-colors">
+                  +91 95390 73788
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <a href="mailto:stay@palmshorehotel.com" className="hover:text-white transition-colors">
-                  stay@palmshorehotel.com
+                <a href="mailto:hotelpalmshore@gmail.com" className="hover:text-white transition-colors">
+                  hotelpalmshore@gmail.com
                 </a>
               </li>
             </ul>
@@ -146,17 +158,23 @@ export default function Footer() {
                   <input
                     type="email"
                     required
+                    disabled={isSubmitting}
                     placeholder="Enter your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-neutral-900 border border-neutral-700 rounded-full py-2.5 pl-4 pr-11 text-xs text-white placeholder:text-neutral-500 focus:outline-hidden focus:border-[#C5A880] transition"
+                    className="w-full bg-neutral-900 border border-neutral-700 rounded-full py-2.5 pl-4 pr-11 text-xs text-white placeholder:text-neutral-500 focus:outline-hidden focus:border-[#C5A880] transition disabled:opacity-60"
                   />
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     aria-label="Subscribe"
-                    className="absolute right-1 top-1 bottom-1 w-8 h-8 rounded-full bg-[#1B4332] hover:bg-emerald-800 text-white flex items-center justify-center transition cursor-pointer"
+                    className="absolute right-1 top-1 bottom-1 w-8 h-8 rounded-full bg-[#1B4332] hover:bg-emerald-800 disabled:opacity-60 disabled:cursor-not-allowed text-white flex items-center justify-center transition cursor-pointer"
                   >
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    {isSubmitting ? (
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    )}
                   </button>
                 </div>
                 <span className="text-[11px] text-neutral-500 block">We value privacy. Unsubscribe anytime.</span>

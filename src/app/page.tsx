@@ -27,6 +27,7 @@ export default function Home() {
     name?: string;
     phone?: string;
     email?: string;
+    bookingRef?: string;
     isConfirmed?: boolean;
   }>({
     roomSlug: HOTEL_ROOMS[0].slug,
@@ -68,12 +69,14 @@ export default function Home() {
     name: string;
     phone: string;
     email: string;
+    bookingRef?: string;
   }) => {
     setBookingParams({
       roomSlug: params.roomSlug,
       name: params.name,
       phone: params.phone,
       email: params.email,
+      bookingRef: params.bookingRef,
       isConfirmed: true,
     });
     setBookingModalOpen(true);
@@ -299,6 +302,7 @@ export default function Home() {
         initialName={bookingParams.name}
         initialPhone={bookingParams.phone}
         initialEmail={bookingParams.email}
+        initialBookingRef={bookingParams.bookingRef}
         initialSubmitted={bookingParams.isConfirmed}
       />
     </div>

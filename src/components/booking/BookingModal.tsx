@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { X, PhoneCall, CheckCircle2, User, Phone, Mail, Hotel, ArrowRight } from "lucide-react";
+import { X, PhoneCall, CheckCircle2, User, Phone, Mail, Hotel, ArrowRight, Loader2 } from "lucide-react";
 import { ALL_BOOKING_TYPES } from "@/data/rooms";
+import { sendContactInquiry } from "@/lib/contact";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface BookingModalProps {
   initialName?: string;
   initialPhone?: string;
   initialEmail?: string;
+  initialBookingRef?: string;
   initialSubmitted?: boolean;
 }
 
@@ -19,7 +21,7 @@ export default function BookingModal(props: BookingModalProps) {
 
   return (
     <BookingModalDialog
-      key={`${props.preselectedRoomSlug || "default"}-${props.initialSubmitted ? "conf" : "form"}-${props.initialPhone || ""}`}
+      key={`${props.preselectedRoomSlug || "default"}-${props.initialSubmitted ? "conf" : "form"}-${props.initialPhone || ""}-${props.initialBookingRef || ""}`}
       {...props}
     />
   );
@@ -31,6 +33,7 @@ function BookingModalDialog({
   initialName = "",
   initialPhone = "",
   initialEmail = "",
+  initialBookingRef = "",
   initialSubmitted = false,
 }: BookingModalProps) {
   const [selectedType, setSelectedType] = useState(
@@ -40,17 +43,38 @@ function BookingModalDialog({
   const [phone, setPhone] = useState(initialPhone);
   const [email, setEmail] = useState(initialEmail);
   const [confirmed, setConfirmed] = useState(initialSubmitted);
-  const [bookingRef, setBookingRef] = useState(() =>
-    initialSubmitted ? `PB-${Math.floor(100000 + Math.random() * 900000)}` : ""
+  const [bookingRef, setBookingRef] = useState(
+    () => initialBookingRef || (initialSubmitted ? `PS-${Math.floor(100000 + Math.random() * 900000)}` : "")
   );
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const currentType =
     ALL_BOOKING_TYPES.find((t) => t.slug === selectedType) || ALL_BOOKING_TYPES[0];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const ref = `PB-${Math.floor(100000 + Math.random() * 900000)}`;
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    const ref = `PS-${Math.floor(100000 + Math.random() * 900000)}`;
     setBookingRef(ref);
+
+    await sendContactInquiry({
+      sender_name: name,
+      sender_email: email,
+      phone_number: phone,
+      subject: `Direct Booking Request: ${currentType.name} [Ref: ${ref}]`,
+      message:
+        `Direct Reservation Request from Palmshore Hotel website:\n` +
+        `Reference Code: ${ref}\n` +
+        `Selected Category: ${currentType.name} (${currentType.rateLabel})\n` +
+        `Guest Name: ${name}\n` +
+        `Phone / WhatsApp: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Requested Confirmation Call: Yes`,
+    });
+
+    setIsSubmitting(false);
     setConfirmed(true);
   };
 
@@ -141,12 +165,12 @@ function BookingModalDialog({
               {/* 24/7 Desk Help */}
               <div className="bg-[#FAF6F0] border border-[#EAE2D5] rounded-xl p-3 max-w-md mx-auto text-[11px] text-neutral-600">
                 <span>Need urgent assistance? Call front desk directly at </span>
-                <a href="tel:+914712480123" className="font-bold text-[#1B4332] hover:underline">
-                  +91 471 248 0123
+                <a href="tel:+919539073788" className="font-bold text-[#1B4332] hover:underline">
+                  +91 95390 73788
                 </a>
                 <span> or WhatsApp </span>
-                <a href="https://wa.me/919447012345" className="font-bold text-[#1B4332] hover:underline">
-                  +91 94470 12345
+                <a href="https://wa.me/919539073788" className="font-bold text-[#1B4332] hover:underline" target="_blank" rel="noopener noreferrer">
+                  +91 95390 73788
                 </a>
               </div>
 
@@ -255,10 +279,20 @@ function BookingModalDialog({
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-2xl bg-[#1B4332] hover:bg-[#123124] text-white font-bold text-xs uppercase tracking-widest shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full py-4 px-6 rounded-2xl bg-[#1B4332] hover:bg-[#123124] disabled:opacity-75 disabled:cursor-not-allowed text-white font-bold text-xs uppercase tracking-widest shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Submit Booking Request</span>
-                <ArrowRight className="w-4 h-4 text-[#E5D0B5]" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin text-[#E5D0B5]" />
+                    <span>Sending Booking Request...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Booking Request</span>
+                    <ArrowRight className="w-4 h-4 text-[#E5D0B5]" />
+                  </>
+                )}
               </button>
 
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-neutral-500 text-center">

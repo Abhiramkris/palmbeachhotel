@@ -9,39 +9,57 @@ export interface Testimonial {
 
 export const GUEST_TESTIMONIALS: Testimonial[] = [
   {
-    id: "test-1",
+    id: "review-1",
     quote:
-      "The perfect place to slow down. Beautiful rooms, warm hospitality, and pure magic at dusk.",
-    author: "Ananya & Raghavan S.",
-    location: "Bangalore, India",
-    stayType: "Suite Room Stay",
+      "Loved my stay here! The staff treated us like family. The rooms were super clean and comfortable. Food was delicious and felt like home-cooked meals. Service was fast and polite. Perfect place for families and travelers!",
+    author: "Umesh Unni",
+    location: "Google Review",
+    stayType: "Family Vacation",
     rating: 5,
   },
   {
-    id: "test-2",
+    id: "review-2",
     quote:
-      "Flawless banquet hall facilities and audio setup for our 80 conference delegates. Exceptional food.",
-    author: "Capt. Vikram Deshmukh",
-    location: "Mumbai, India",
-    stayType: "Corporate Retreat",
+      "The rooms were clean, spacious, and well-maintained with a calm, relaxing ambiance. Food and hotel service is very good, atmosphere is very nice. Totally satisfied, must try!",
+    author: "Adhib Aji",
+    location: "Google Review",
+    stayType: "Holiday Stay",
     rating: 5,
   },
   {
-    id: "test-3",
+    id: "review-3",
     quote:
-      "Authentic Kerala charm in Palakkad. Fresh morning air, peaceful gardens, and attentive staff who anticipate every need.",
-    author: "Elena Rostova",
-    location: "Geneva, Switzerland",
-    stayType: "Holiday Vacation",
+      "The atmosphere was inviting, the staff was friendly, and the food was outstanding. Excellent hospitality, attentive team, and good management.",
+    author: "Amal Nandhakumar",
+    location: "Google Review",
+    stayType: "Guest Stay & Dining",
     rating: 5,
   },
   {
-    id: "test-4",
+    id: "review-4",
     quote:
-      "Immaculately clean rooms, wonderful palm courtyard, and great food. Exceeded all expectations.",
-    author: "Prashanth Nair",
-    location: "Cochin, Kerala",
-    stayType: "Executive King Room",
+      "Neat and clean restaurant and hotel. Bar, food, rooms, and hall for meetings all in one place. Calm place with excellent service.",
+    author: "Satheeshkumar Alayankadukalam",
+    location: "Google Review",
+    stayType: "Business & Leisure",
+    rating: 5,
+  },
+  {
+    id: "review-5",
+    quote:
+      "Very nice hotel with clean rooms and well-maintained bathrooms. The room was spotless and comfortable. Truly the best find on this route.",
+    author: "BITTU SAJEEV",
+    location: "Google Review",
+    stayType: "Transit Stay",
+    rating: 5,
+  },
+  {
+    id: "review-6",
+    quote:
+      "The room was spotless, spacious, and elegantly decorated. Good food and great ambience. We had a wonderful experience!",
+    author: "Saranya S",
+    location: "Google Review",
+    stayType: "Family Stay",
     rating: 5,
   },
 ];

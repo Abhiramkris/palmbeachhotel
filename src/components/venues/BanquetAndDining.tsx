@@ -26,7 +26,7 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <span className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20">
-                  Theatre & Conference Layouts
+                  150+ Guest Capacity Banquet Hall
                 </span>
               </div>
 
@@ -68,7 +68,7 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
               </h2>
 
               <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
-                Pillar-free, climate-controlled venue for weddings, corporate seminars, and grand family celebrations.
+                Pillar-free, climate-controlled venue with 150+ guest capacity for weddings, corporate seminars, and grand family celebrations.
               </p>
 
               {/* Feature points */}
@@ -90,9 +90,9 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                     <Users className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-neutral-900">Flexible Seating</h4>
+                    <h4 className="font-bold text-sm text-neutral-900">150+ Guest Capacity</h4>
                     <p className="text-xs text-neutral-600 mt-0.5">
-                      Theatre, seminar or banquet seating.
+                      Theatre, seminar or banquet seating for 150+ guests.
                     </p>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function BanquetAndDining({ onOpenBooking }: BanquetAndDiningProp
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
-                  <span>Indoor family dining hall & private booths</span>
+                  <span>Spacious indoor family dining hall</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-neutral-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-[#1B4332] shrink-0" />
