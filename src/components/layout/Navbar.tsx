@@ -56,7 +56,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     { name: "Dining", href: "/#dining" },
     { name: "Amenities", href: "/#amenities" },
     { name: "Gallery", href: "/#gallery" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
